@@ -11,24 +11,35 @@ export type ResLike = {
   time: number
   name: string
   results: ResItem[]
+  origin?: {
+    results: ResItem[]
+  }
 }
 
-function groupByTopic(items: ResItem[]) {
+function groupByTopic(items: ResItem[], originItems?: ResItem[]) {
+  const originByIdeaId = new Map<string, ResItem['topic']>()
+  if (originItems) {
+    for (const item of originItems) originByIdeaId.set(item.idea.id, item.topic)
+  }
+
   const byId = new Map<
     string,
-    { topic: ResItem['topic']; ideas: Array<{ id: string; text: string; score: number }> }
+    { topic: ResItem['topic']; ideas: Array<{ id: string; text: string; score: number; moved: boolean }> }
   >()
 
   for (const item of items) {
+    const originTopic = originByIdeaId.get(item.idea.id)
+    const moved = Boolean(originTopic && originTopic.id !== item.topic.id)
+
     const existing = byId.get(item.topic.id)
     if (!existing) {
       byId.set(item.topic.id, {
         topic: item.topic,
-        ideas: [{ id: item.idea.id, text: item.idea.text, score: item.score }],
+        ideas: [{ id: item.idea.id, text: item.idea.text, score: item.score, moved }],
       })
       continue
     }
-    existing.ideas.push({ id: item.idea.id, text: item.idea.text, score: item.score })
+    existing.ideas.push({ id: item.idea.id, text: item.idea.text, score: item.score, moved })
   }
 
   for (const group of byId.values()) {
@@ -45,7 +56,7 @@ function groupByTopic(items: ResItem[]) {
 }
 
 export default function Topics({ res }: { res: ResLike }) {
-  const grouped = groupByTopic(res.results)
+  const grouped = groupByTopic(res.results, res.origin?.results)
 
   return (
     <div className="mt-8">
