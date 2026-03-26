@@ -31,7 +31,13 @@ function groupByTopic(items: ResItem[]) {
     existing.ideas.push({ id: item.idea.id, text: item.idea.text, score: item.score })
   }
 
+  for (const group of byId.values()) {
+    group.ideas.sort((a, b) => b.score - a.score)
+  }
+
   return Array.from(byId.values()).sort((a, b) => {
+    const countDiff = b.ideas.length - a.ideas.length
+    if (countDiff !== 0) return countDiff
     const aKey = `${a.topic.topicLvl1} — ${a.topic.topicLvl2}`.toLowerCase()
     const bKey = `${b.topic.topicLvl1} — ${b.topic.topicLvl2}`.toLowerCase()
     return aKey.localeCompare(bKey)

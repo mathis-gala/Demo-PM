@@ -1,6 +1,6 @@
-export const PARAPHRASE_MULTILINGUAL_RES = {
-  time: 541,
-  name: "paraphrase-multilingual-MiniLM-L12-v2",
+export const CROSS_ONLY_RES = {
+  time: 10000,
+  name: "L6-V2 Cross Only With Desc",
   results: [
     {
       idea: {
@@ -8,11 +8,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Trop de doublons entre les équipes.",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
+        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        topicLvl2: "Outils & Environnement de Travail",
       },
-      score: 0.3092012405395508,
+      score: 2.0053892135620117,
     },
     {
       idea: {
@@ -24,7 +24,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
         topicLvl2: "Processus & Workflows Inter-services",
       },
-      score: 0.6339221000671387,
+      score: -5.083301067352295,
     },
     {
       idea: {
@@ -32,11 +32,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On refait souvent le même travail à plusieurs.",
       },
       topic: {
-        id: "c45fd1c8-ca66-48e3-a0df-f34630dfaae3",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Mesure & Amélioration Continue",
+        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Outils & Environnement de Travail",
       },
-      score: 0.46359020471572876,
+      score: -5.568307876586914,
     },
     {
       idea: {
@@ -44,11 +44,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Communication pas fluide entre pôles.",
       },
       topic: {
-        id: "f5c1a4e0-8c9e-4194-b14d-adf46d3d05db",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Outils & Canaux de Diffusion",
+        id: "1f99c7d1-1480-4161-8a13-fcd9c1070e08",
+        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
+        topicLvl2: "Communication & Transversalité",
       },
-      score: 0.7029637098312378,
+      score: -1.6519689559936523,
     },
     {
       idea: {
@@ -56,11 +56,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Manque de clarté sur qui fait quoi.",
       },
       topic: {
-        id: "713877d4-06c6-4dfc-8da9-9e68740db4dc",
+        id: "45c7cb22-cabf-4cfb-8f56-0d6f00cf7502",
         topicLvl1: "COMMUNICATION",
-        topicLvl2: "Formation & Montée en Compétences",
+        topicLvl2: "Communication Externe",
       },
-      score: 0.41385596990585327,
+      score: -2.9273109436035156,
     },
     {
       idea: {
@@ -68,11 +68,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Objectifs souvent modifiés en cours de route.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        id: "3630953a-e680-46df-8916-3793c16afedf",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Stratégie & Positionnement",
       },
-      score: 0.42144957184791565,
+      score: -4.676880836486816,
     },
     {
       idea: {
@@ -80,11 +80,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Trop de réunions inutiles ou redondantes.",
       },
       topic: {
-        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Outils & Environnement de Travail",
+        id: "8a53f392-16ab-47a1-9eeb-c23c1f048d6b",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Outils & Digitalisation",
       },
-      score: 0.3620789647102356,
+      score: -8.529367446899414,
     },
     {
       idea: {
@@ -92,11 +92,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Pas assez de décisions concrètes après les réunions.",
       },
       topic: {
-        id: "2c710fdc-50f3-473c-ada0-432b19d99153",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Coordination, Communication & Comitologie",
+        id: "94a39cbb-c254-4ee3-baed-820abbb1fc86",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Gouvernance & Prises de Décision",
       },
-      score: 0.3770442605018616,
+      score: -9.062804222106934,
     },
     {
       idea: {
@@ -104,11 +104,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Trop d’outils à utiliser pour une même tâche.",
       },
       topic: {
-        id: "ebf84fa6-6081-4a65-92ca-542be05d0c19",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Évolution des Outils & Systèmes d'Information",
+        id: "49433d20-9200-402a-adba-e75f5d0caa9d",
+        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
+        topicLvl2: "Adoption & Formation",
       },
-      score: 0.3779523968696594,
+      score: -1.5170319080352783,
     },
     {
       idea: {
@@ -116,11 +116,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Informations perdues ou non partagées.",
       },
       topic: {
-        id: "eb5d82a2-7af3-4971-b7f3-0059f88fbcc1",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Onboarding et transfert de connaissances",
+        id: "25c07c59-4fbd-4ddf-b262-2599f579d153",
+        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
+        topicLvl2: "Outils & Systèmes d'Information Partagés",
       },
-      score: 0.5686463713645935,
+      score: -3.7849607467651367,
     },
     {
       idea: {
@@ -128,11 +128,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Manque de feedback sur le travail réalisé.",
       },
       topic: {
-        id: "6230140d-3195-457e-8871-bdd2c360fa94",
+        id: "3107a683-d5dc-4d79-8d1b-ca6f768a97e2",
         topicLvl1: "PROCESSUS",
-        topicLvl2: "Contrôles, Audits & Reporting",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.40541112422943115,
+      score: -1.4225068092346191,
     },
     {
       idea: {
@@ -140,11 +140,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Pas assez de reconnaissance des efforts.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        id: "45db4b3d-8d41-46c9-94e7-663ceeb53d3a",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Engagement & Qualité de Vie au Travail",
       },
-      score: 0.2952302098274231,
+      score: -3.874424457550049,
     },
     {
       idea: {
@@ -152,11 +152,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Charge de travail trop élevée.",
       },
       topic: {
-        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Outils & Environnement de Travail",
+        id: "388c41fb-24ba-47d2-93ee-de9b420177d9",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.40313825011253357,
+      score: 1.7178175449371338,
     },
     {
       idea: {
@@ -164,11 +164,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Toujours dans l’urgence, peu d’anticipation.",
       },
       topic: {
-        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
+        id: "721bfb23-0816-44ab-844c-7323f0d40921",
         topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Expérience & Satisfaction",
+        topicLvl2: "Acquisition & Promotion",
       },
-      score: 0.29769253730773926,
+      score: -5.332592010498047,
     },
     {
       idea: {
@@ -176,11 +176,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Pas assez de moyens humains pour la charge actuelle.",
       },
       topic: {
-        id: "94a39cbb-c254-4ee3-baed-820abbb1fc86",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Gouvernance & Prises de Décision",
+        id: "b73e3d18-fd92-4323-ad94-0c10d6d27bf3",
+        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
+        topicLvl2: "Rôles, Responsabilités & Mutualisation des Ressources",
       },
-      score: 0.2848449945449829,
+      score: -6.277332305908203,
     },
     {
       idea: {
@@ -188,11 +188,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Attente longue pour valider une simple décision.",
       },
       topic: {
-        id: "6ccee838-e399-4b15-a226-da98a948dec2",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Suivi et évaluation",
+        id: "6230140d-3195-457e-8871-bdd2c360fa94",
+        topicLvl1: "PROCESSUS",
+        topicLvl2: "Contrôles, Audits & Reporting",
       },
-      score: 0.29817941784858704,
+      score: -8.192585945129395,
     },
     {
       idea: {
@@ -200,11 +200,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Trop de mails → difficile de suivre les priorités.",
       },
       topic: {
-        id: "6df827ab-6e6b-46db-8969-b8acac63c603",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Évaluation & Optimisation Continue",
+        id: "cc5ab279-b785-425c-8605-9d308f344ef5",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Organisation & Pilotage Allégés",
       },
-      score: 0.4018864035606384,
+      score: -1.1776933670043945,
     },
     {
       idea: {
@@ -212,11 +212,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Manque de vision globale sur les projets en cours.",
       },
       topic: {
-        id: "b88b5c20-e168-4397-9ed6-bffed89adbe5",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Architecture & Infrastructure",
+        id: "3630953a-e680-46df-8916-3793c16afedf",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Stratégie & Positionnement",
       },
-      score: 0.4616907835006714,
+      score: -8.363334655761719,
     },
     {
       idea: {
@@ -224,11 +224,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Difficulté à collaborer avec d’autres départements.",
       },
       topic: {
-        id: "b73e3d18-fd92-4323-ad94-0c10d6d27bf3",
-        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
-        topicLvl2: "Rôles, Responsabilités & Mutualisation des Ressources",
+        id: "c529b95c-cacd-41e6-874b-73d8a767b1be",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Événementiel & Animation",
       },
-      score: 0.5125166773796082,
+      score: -6.9418439865112305,
     },
     {
       idea: {
@@ -236,11 +236,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Mauvaise coordination entre terrain et direction.",
       },
       topic: {
-        id: "3630953a-e680-46df-8916-3793c16afedf",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Stratégie & Positionnement",
+        id: "2c6e5d02-3ee0-4b59-9d28-2b103895331a",
+        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
+        topicLvl2: "Processus & Workflows Inter-services",
       },
-      score: 0.5824494361877441,
+      score: -0.9565793871879578,
     },
     {
       idea: {
@@ -248,11 +248,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Difficulté à obtenir des réponses rapides des autres services.",
       },
       topic: {
-        id: "2c6e5d02-3ee0-4b59-9d28-2b103895331a",
-        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
-        topicLvl2: "Processus & Workflows Inter-services",
+        id: "420ce74e-6f1a-4059-8af6-3d32e2e43caa",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Automatisation & Robotisation",
       },
-      score: 0.40919193625450134,
+      score: -7.177043914794922,
     },
     {
       idea: {
@@ -260,11 +260,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Les priorités changent trop souvent sans explication.",
       },
       topic: {
-        id: "8474348d-e979-43f8-b0f7-e45edc9e66f5",
+        id: "cc5ab279-b785-425c-8605-9d308f344ef5",
         topicLvl1: "SIMPLIFICATION",
-        topicLvl2: "Refonte & Rationalisation des Processus",
+        topicLvl2: "Organisation & Pilotage Allégés",
       },
-      score: 0.30773720145225525,
+      score: -5.353424549102783,
     },
     {
       idea: {
@@ -272,11 +272,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Peu de temps pour prendre du recul sur notre travail.",
       },
       topic: {
-        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Outils & Environnement de Travail",
+        id: "3107a683-d5dc-4d79-8d1b-ca6f768a97e2",
+        topicLvl1: "PROCESSUS",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.3941309452056885,
+      score: -2.842417001724243,
     },
     {
       idea: {
@@ -288,7 +288,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "PROCESSUS",
         topicLvl2: "Contrôles, Audits & Reporting",
       },
-      score: 0.41369277238845825,
+      score: -7.414422988891602,
     },
     {
       idea: {
@@ -296,11 +296,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Les outils évoluent sans formation adaptée.",
       },
       topic: {
-        id: "7712bd07-7f75-4234-9f66-5129b4bfbbb6",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Outils et ressources d'apprentissage",
+        id: "49433d20-9200-402a-adba-e75f5d0caa9d",
+        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
+        topicLvl2: "Adoption & Formation",
       },
-      score: 0.5262292623519897,
+      score: 0.6119754910469055,
     },
     {
       idea: {
@@ -308,11 +308,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Manque de transparence sur les décisions prises.",
       },
       topic: {
-        id: "e50e047c-3b1f-425b-896a-af3f36a6f141",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Sécurité & Conformité",
+        id: "94a39cbb-c254-4ee3-baed-820abbb1fc86",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Gouvernance & Prises de Décision",
       },
-      score: 0.488146036863327,
+      score: 1.6690540313720703,
     },
     {
       idea: {
@@ -320,11 +320,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Peu de coordination entre les managers.",
       },
       topic: {
-        id: "e1a39f77-941f-4c71-884c-a9d5f90c3a26",
-        topicLvl1: "RH & MANAGEMENT",
-        topicLvl2: "Politiques, Processus RH & Administration du Personnel",
+        id: "5a61f691-be6d-4a48-b8fd-e8781438abd9",
+        topicLvl1: "COMPÉTENCES ET FORMATION",
+        topicLvl2: "Communication et collaboration",
       },
-      score: 0.542926549911499,
+      score: -0.2992722988128662,
     },
     {
       idea: {
@@ -332,11 +332,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Difficile de faire entendre nos contraintes opérationnelles.",
       },
       topic: {
-        id: "2c710fdc-50f3-473c-ada0-432b19d99153",
+        id: "3fea25a1-13cd-4473-9a20-08d829cdda9e",
         topicLvl1: "PROCESSUS",
-        topicLvl2: "Coordination, Communication & Comitologie",
+        topicLvl2: "Automatisation & Optimisation Opérationnelle",
       },
-      score: 0.4062485694885254,
+      score: 0.05788135901093483,
     },
     {
       idea: {
@@ -344,11 +344,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Pas assez de moments d’échange hors production.",
       },
       topic: {
-        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Outils & Environnement de Travail",
+        id: "c529b95c-cacd-41e6-874b-73d8a767b1be",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Événementiel & Animation",
       },
-      score: 0.2817850708961487,
+      score: -3.5153732299804688,
     },
     {
       idea: {
@@ -356,11 +356,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On découvre trop tard les changements décidés ailleurs.",
       },
       topic: {
-        id: "f5c1a4e0-8c9e-4194-b14d-adf46d3d05db",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Outils & Canaux de Diffusion",
+        id: "49433d20-9200-402a-adba-e75f5d0caa9d",
+        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
+        topicLvl2: "Adoption & Formation",
       },
-      score: 0.27750131487846375,
+      score: -6.627493858337402,
     },
     {
       idea: {
@@ -368,11 +368,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Belle cohésion d’équipe malgré les contraintes.",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
+        id: "2e70c524-e836-4aac-8f92-db4b251dfff9",
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        topicLvl2: "Culture d'Équipe, Cohésion & Bien-Être",
       },
-      score: 0.5543524026870728,
+      score: -0.7217828631401062,
     },
     {
       idea: {
@@ -380,11 +380,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Projet livré dans les temps et conforme aux attentes.",
       },
       topic: {
-        id: "3107a683-d5dc-4d79-8d1b-ca6f768a97e2",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Organisation & Pilotage d'Équipe",
+        id: "e50e047c-3b1f-425b-896a-af3f36a6f141",
+        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
+        topicLvl2: "Sécurité & Conformité",
       },
-      score: 0.4548850655555725,
+      score: -7.685965538024902,
     },
     {
       idea: {
@@ -392,11 +392,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On s’entraide spontanément au quotidien.",
       },
       topic: {
-        id: "618cc538-ebef-40a8-854c-58847e15f22f",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Formation & Sensibilisation",
+        id: "2e70c524-e836-4aac-8f92-db4b251dfff9",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Culture d'Équipe, Cohésion & Bien-Être",
       },
-      score: 0.35441339015960693,
+      score: 0.8067300915718079,
     },
     {
       idea: {
@@ -404,11 +404,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On a su s’adapter vite à une situation difficile.",
       },
       topic: {
-        id: "713877d4-06c6-4dfc-8da9-9e68740db4dc",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Formation & Montée en Compétences",
+        id: "6ccee838-e399-4b15-a226-da98a948dec2",
+        topicLvl1: "COMPÉTENCES ET FORMATION",
+        topicLvl2: "Suivi et évaluation",
       },
-      score: 0.3456018567085266,
+      score: -8.823543548583984,
     },
     {
       idea: {
@@ -416,11 +416,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Bonne ambiance de travail, respect et bienveillance.",
       },
       topic: {
-        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Expérience & Satisfaction",
+        id: "2e70c524-e836-4aac-8f92-db4b251dfff9",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Culture d'Équipe, Cohésion & Bien-Être",
       },
-      score: 0.5670260787010193,
+      score: 1.2494109869003296,
     },
     {
       idea: {
@@ -428,11 +428,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Le client a salué notre travail.",
       },
       topic: {
-        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Expérience & Satisfaction",
+        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Outils & Environnement de Travail",
       },
-      score: 0.4946655333042145,
+      score: -3.8592476844787598,
     },
     {
       idea: {
@@ -440,11 +440,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "L’équipe reste soudée, même en période de rush.",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        id: "3107a683-d5dc-4d79-8d1b-ca6f768a97e2",
+        topicLvl1: "PROCESSUS",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.3305947482585907,
+      score: -5.674100875854492,
     },
     {
       idea: {
@@ -452,11 +452,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On a su innover dans notre manière de travailler.",
       },
       topic: {
-        id: "c9710d86-31d2-48a1-a028-043e7dda0819",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Conception et déploiement des formations",
+        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Outils & Environnement de Travail",
       },
-      score: 0.4538501799106598,
+      score: -8.169757843017578,
     },
     {
       idea: {
@@ -468,7 +468,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
         topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
       },
-      score: 0.550733745098114,
+      score: -4.736169815063477,
     },
     {
       idea: {
@@ -476,11 +476,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Process interne simplifié grâce à notre initiative.",
       },
       topic: {
-        id: "a22e9fa1-a1ae-448f-a328-05b559871ae0",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Standardisation & Formalisation des Processus",
+        id: "cc5ab279-b785-425c-8605-9d308f344ef5",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Organisation & Pilotage Allégés",
       },
-      score: 0.648465096950531,
+      score: -6.184324264526367,
     },
     {
       idea: {
@@ -488,11 +488,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Formation réussie d’un nouveau collaborateur.",
       },
       topic: {
-        id: "c9710d86-31d2-48a1-a028-043e7dda0819",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Conception et déploiement des formations",
+        id: "452263de-43c4-4ccb-ae31-62583105a5e1",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Formation & Développement des Compétences",
       },
-      score: 0.6635407209396362,
+      score: 0.9184563755989075,
     },
     {
       idea: {
@@ -500,11 +500,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On a progressé collectivement sur nos compétences.",
       },
       topic: {
-        id: "9fd07680-b8d0-4665-acba-69ec25277be9",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Management des compétences et évolutions professionnelles",
+        id: "452263de-43c4-4ccb-ae31-62583105a5e1",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Formation & Développement des Compétences",
       },
-      score: 0.5075326561927795,
+      score: -4.912928104400635,
     },
     {
       idea: {
@@ -512,11 +512,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Fiers de la qualité des livrables produits.",
       },
       topic: {
-        id: "c45fd1c8-ca66-48e3-a0df-f34630dfaae3",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Mesure & Amélioration Continue",
+        id: "45db4b3d-8d41-46c9-94e7-663ceeb53d3a",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Engagement & Qualité de Vie au Travail",
       },
-      score: 0.32063722610473633,
+      score: -2.13152813911438,
     },
     {
       idea: {
@@ -524,11 +524,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On a réussi à réduire les délais sans perdre en qualité.",
       },
       topic: {
-        id: "3fea25a1-13cd-4473-9a20-08d829cdda9e",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Automatisation & Optimisation Opérationnelle",
+        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
+        topicLvl1: "PARCOURS CLIENT",
+        topicLvl2: "Expérience & Satisfaction",
       },
-      score: 0.39061054587364197,
+      score: -6.80302095413208,
     },
     {
       idea: {
@@ -536,11 +536,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Excellente collaboration entre métiers différents.",
       },
       topic: {
-        id: "9fd07680-b8d0-4665-acba-69ec25277be9",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Management des compétences et évolutions professionnelles",
+        id: "25c07c59-4fbd-4ddf-b262-2599f579d153",
+        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
+        topicLvl2: "Outils & Systèmes d'Information Partagés",
       },
-      score: 0.6843236684799194,
+      score: -1.7785966396331787,
     },
     {
       idea: {
@@ -548,11 +548,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Nos efforts ont été reconnus par le management.",
       },
       topic: {
-        id: "3107a683-d5dc-4d79-8d1b-ca6f768a97e2",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Organisation & Pilotage d'Équipe",
+        id: "e19bbf55-b63f-4d10-84a5-f1062678552b",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Recrutement & Intégration",
       },
-      score: 0.5435320138931274,
+      score: -8.70258903503418,
     },
     {
       idea: {
@@ -560,11 +560,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Très bonne réactivité face à un imprévu client.",
       },
       topic: {
-        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Expérience & Satisfaction",
+        id: "e19bbf55-b63f-4d10-84a5-f1062678552b",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Recrutement & Intégration",
       },
-      score: 0.5170603394508362,
+      score: -9.918264389038086,
     },
     {
       idea: {
@@ -572,11 +572,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On a instauré une culture de confiance.",
       },
       topic: {
-        id: "e50e047c-3b1f-425b-896a-af3f36a6f141",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Sécurité & Conformité",
+        id: "0cf22e97-62a9-4ee2-a3ad-e15a2368cb7f",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Formation & Sensibilisation à la Simplification",
       },
-      score: 0.4038492739200592,
+      score: -4.999959945678711,
     },
     {
       idea: {
@@ -584,11 +584,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Fiers d’avoir aidé un collègue à réussir.",
       },
       topic: {
-        id: "9fd07680-b8d0-4665-acba-69ec25277be9",
+        id: "7712bd07-7f75-4234-9f66-5129b4bfbbb6",
         topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Management des compétences et évolutions professionnelles",
+        topicLvl2: "Outils et ressources d'apprentissage",
       },
-      score: 0.5863589644432068,
+      score: -10.685698509216309,
     },
     {
       idea: {
@@ -596,11 +596,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On apprend beaucoup les uns des autres.",
       },
       topic: {
-        id: "713877d4-06c6-4dfc-8da9-9e68740db4dc",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Formation & Montée en Compétences",
+        id: "5a61f691-be6d-4a48-b8fd-e8781438abd9",
+        topicLvl1: "COMPÉTENCES ET FORMATION",
+        topicLvl2: "Communication et collaboration",
       },
-      score: 0.5027060508728027,
+      score: -7.620398044586182,
     },
     {
       idea: {
@@ -608,11 +608,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On a accueilli un nouveau collègue avec bienveillance.",
       },
       topic: {
-        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
+        id: "721bfb23-0816-44ab-844c-7323f0d40921",
         topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Expérience & Satisfaction",
+        topicLvl2: "Acquisition & Promotion",
       },
-      score: 0.383944571018219,
+      score: -8.713338851928711,
     },
     {
       idea: {
@@ -620,11 +620,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Très bon esprit d’équipe pendant la dernière période chargée.",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
+        id: "94a39cbb-c254-4ee3-baed-820abbb1fc86",
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        topicLvl2: "Gouvernance & Prises de Décision",
       },
-      score: 0.49518388509750366,
+      score: -5.461472511291504,
     },
     {
       idea: {
@@ -632,11 +632,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Amélioration visible de notre efficacité cette année.",
       },
       topic: {
-        id: "c45fd1c8-ca66-48e3-a0df-f34630dfaae3",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Mesure & Amélioration Continue",
+        id: "6df827ab-6e6b-46db-8969-b8acac63c603",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Évaluation & Optimisation Continue",
       },
-      score: 0.4668594300746918,
+      score: 1.4311728477478027,
     },
     {
       idea: {
@@ -644,11 +644,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Nos suggestions ont été prises en compte par la direction.",
       },
       topic: {
-        id: "3630953a-e680-46df-8916-3793c16afedf",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Stratégie & Positionnement",
+        id: "e19bbf55-b63f-4d10-84a5-f1062678552b",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Recrutement & Intégration",
       },
-      score: 0.3761597275733948,
+      score: -4.5594682693481445,
     },
     {
       idea: {
@@ -656,11 +656,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Projet complexe mené à bien collectivement.",
       },
       topic: {
-        id: "5a61f691-be6d-4a48-b8fd-e8781438abd9",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Communication et collaboration",
+        id: "f8ea9fb1-de62-458f-8197-6974ecf47041",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Processus & Méthodes de Travail",
       },
-      score: 0.5023939609527588,
+      score: -7.250932693481445,
     },
     {
       idea: {
@@ -668,11 +668,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On a réussi à instaurer plus de clarté dans nos échanges.",
       },
       topic: {
-        id: "6df827ab-6e6b-46db-8969-b8acac63c603",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Évaluation & Optimisation Continue",
+        id: "94a39cbb-c254-4ee3-baed-820abbb1fc86",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Gouvernance & Prises de Décision",
       },
-      score: 0.5021323561668396,
+      score: -5.690041542053223,
     },
     {
       idea: {
@@ -680,11 +680,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Les clients ont remarqué notre professionnalisme.",
       },
       topic: {
-        id: "9fd07680-b8d0-4665-acba-69ec25277be9",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Management des compétences et évolutions professionnelles",
+        id: "45c7cb22-cabf-4cfb-8f56-0d6f00cf7502",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Communication Externe",
       },
-      score: 0.49113643169403076,
+      score: -5.169301509857178,
     },
     {
       idea: {
@@ -692,11 +692,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "On a maintenu une bonne ambiance malgré la charge.",
       },
       topic: {
-        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Expérience & Satisfaction",
+        id: "388c41fb-24ba-47d2-93ee-de9b420177d9",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.3510115444660187,
+      score: -9.679821014404297,
     },
     {
       idea: {
@@ -708,7 +708,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "PROCESSUS",
         topicLvl2: "Coordination, Communication & Comitologie",
       },
-      score: 0.5053096413612366,
+      score: -7.320542812347412,
     },
     {
       idea: {
@@ -716,11 +716,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Fiers d’avoir créé une vraie dynamique d’équipe.",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
+        id: "94a39cbb-c254-4ee3-baed-820abbb1fc86",
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        topicLvl2: "Gouvernance & Prises de Décision",
       },
-      score: 0.5818169116973877,
+      score: -4.850314140319824,
     },
     {
       idea: {
@@ -728,11 +728,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Démotivation à cause de la charge de travail.",
       },
       topic: {
-        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Outils & Environnement de Travail",
+        id: "388c41fb-24ba-47d2-93ee-de9b420177d9",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.5728275775909424,
+      score: -0.19598837196826935,
     },
     {
       idea: {
@@ -740,11 +740,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Perte de talents si rien ne change.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        id: "6ec76bb4-d6c5-4ad1-be70-4f408dc6f7d8",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Leadership & Management de la Transformation",
       },
-      score: 0.37702083587646484,
+      score: -10.578264236450195,
     },
     {
       idea: {
@@ -752,11 +752,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Tensions entre équipes à cause du stress.",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
+        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        topicLvl2: "Outils & Environnement de Travail",
       },
-      score: 0.4017355144023895,
+      score: -5.619350433349609,
     },
     {
       idea: {
@@ -764,11 +764,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Baisse de qualité des livrables.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        id: "45db4b3d-8d41-46c9-94e7-663ceeb53d3a",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Engagement & Qualité de Vie au Travail",
       },
-      score: 0.546548068523407,
+      score: -1.8030320405960083,
     },
     {
       idea: {
@@ -776,11 +776,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Fatigue ou burn-out sur le long terme.",
       },
       topic: {
-        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Expérience & Satisfaction",
+        id: "3107a683-d5dc-4d79-8d1b-ca6f768a97e2",
+        topicLvl1: "PROCESSUS",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.36183035373687744,
+      score: -11.117907524108887,
     },
     {
       idea: {
@@ -788,11 +788,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Projets bloqués faute de décision rapide.",
       },
       topic: {
-        id: "6230140d-3195-457e-8871-bdd2c360fa94",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Contrôles, Audits & Reporting",
+        id: "94a39cbb-c254-4ee3-baed-820abbb1fc86",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Gouvernance & Prises de Décision",
       },
-      score: 0.3894902169704437,
+      score: -8.702455520629883,
     },
     {
       idea: {
@@ -800,11 +800,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Manque de coordination entre pôles critiques.",
       },
       topic: {
-        id: "9f935e40-fa04-4488-a774-c4b2be41c4ff",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Fidélisation & Engagement",
+        id: "5a61f691-be6d-4a48-b8fd-e8781438abd9",
+        topicLvl1: "COMPÉTENCES ET FORMATION",
+        topicLvl2: "Communication et collaboration",
       },
-      score: 0.6385668516159058,
+      score: -3.7615344524383545,
     },
     {
       idea: {
@@ -812,11 +812,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Dépendance à une seule personne sur un sujet clé.",
       },
       topic: {
-        id: "eb5d82a2-7af3-4971-b7f3-0059f88fbcc1",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Onboarding et transfert de connaissances",
+        id: "cc5ab279-b785-425c-8605-9d308f344ef5",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Organisation & Pilotage Allégés",
       },
-      score: 0.3321913480758667,
+      score: -10.8794527053833,
     },
     {
       idea: {
@@ -824,11 +824,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Risque d’erreurs dues à la précipitation.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
+        id: "e50e047c-3b1f-425b-896a-af3f36a6f141",
         topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        topicLvl2: "Sécurité & Conformité",
       },
-      score: 0.2936808466911316,
+      score: -8.394200325012207,
     },
     {
       idea: {
@@ -836,11 +836,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Délai non tenu par manque de ressources.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        id: "7712bd07-7f75-4234-9f66-5129b4bfbbb6",
+        topicLvl1: "COMPÉTENCES ET FORMATION",
+        topicLvl2: "Outils et ressources d'apprentissage",
       },
-      score: 0.3550291955471039,
+      score: -4.148303031921387,
     },
     {
       idea: {
@@ -852,7 +852,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
         topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
       },
-      score: 0.4055788815021515,
+      score: -4.517120361328125,
     },
     {
       idea: {
@@ -860,11 +860,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Mauvaise image auprès des clients internes.",
       },
       topic: {
-        id: "6230140d-3195-457e-8871-bdd2c360fa94",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Contrôles, Audits & Reporting",
+        id: "919e2e09-a172-4b50-9915-7a5ec04a2c59",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Communication Interne & Culture d'Entreprise",
       },
-      score: 0.43897056579589844,
+      score: -6.725864410400391,
     },
     {
       idea: {
@@ -876,7 +876,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "COMMUNICATION",
         topicLvl2: "Stratégie & Positionnement",
       },
-      score: 0.6645708084106445,
+      score: -8.109354019165039,
     },
     {
       idea: {
@@ -884,11 +884,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Innovation freinée par la surcharge opérationnelle.",
       },
       topic: {
-        id: "ebf84fa6-6081-4a65-92ca-542be05d0c19",
+        id: "3fea25a1-13cd-4473-9a20-08d829cdda9e",
         topicLvl1: "PROCESSUS",
-        topicLvl2: "Évolution des Outils & Systèmes d'Information",
+        topicLvl2: "Automatisation & Optimisation Opérationnelle",
       },
-      score: 0.5060991644859314,
+      score: -3.306384563446045,
     },
     {
       idea: {
@@ -896,11 +896,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Conflits liés au manque de communication.",
       },
       topic: {
-        id: "713877d4-06c6-4dfc-8da9-9e68740db4dc",
+        id: "45c7cb22-cabf-4cfb-8f56-0d6f00cf7502",
         topicLvl1: "COMMUNICATION",
-        topicLvl2: "Formation & Montée en Compétences",
+        topicLvl2: "Communication Externe",
       },
-      score: 0.6263771653175354,
+      score: -8.585269927978516,
     },
     {
       idea: {
@@ -912,7 +912,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "COMPÉTENCES ET FORMATION",
         topicLvl2: "Onboarding et transfert de connaissances",
       },
-      score: 0.4435451626777649,
+      score: -5.425424098968506,
     },
     {
       idea: {
@@ -920,11 +920,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Découragement si les efforts ne sont pas valorisés.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        id: "d303f4be-38d5-49a8-b5db-6b6aaf42611c",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Allègement Administratif & Réglementaire",
       },
-      score: 0.480293333530426,
+      score: -10.850597381591797,
     },
     {
       idea: {
@@ -936,7 +936,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "COMMUNICATION",
         topicLvl2: "Stratégie & Positionnement",
       },
-      score: 0.44367143511772156,
+      score: -6.35294246673584,
     },
     {
       idea: {
@@ -944,11 +944,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Perte de sens du travail collectif.",
       },
       topic: {
-        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Outils & Environnement de Travail",
+        id: "388c41fb-24ba-47d2-93ee-de9b420177d9",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.6415604948997498,
+      score: 2.373767137527466,
     },
     {
       idea: {
@@ -956,11 +956,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Vision trop court terme qui empêche de planifier.",
       },
       topic: {
-        id: "321ba621-ac97-41c9-b59d-616ac02aa957",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Diagnostic et planification",
+        id: "3630953a-e680-46df-8916-3793c16afedf",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Stratégie & Positionnement",
       },
-      score: 0.33136534690856934,
+      score: -6.94547176361084,
     },
     {
       idea: {
@@ -968,11 +968,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Risque de perte de motivation chez les plus anciens.",
       },
       topic: {
-        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Expérience & Satisfaction",
+        id: "e50e047c-3b1f-425b-896a-af3f36a6f141",
+        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
+        topicLvl2: "Sécurité & Conformité",
       },
-      score: 0.3331886827945709,
+      score: -6.712943077087402,
     },
     {
       idea: {
@@ -980,11 +980,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Trop de changements en même temps → perte de repères.",
       },
       topic: {
-        id: "f5c1a4e0-8c9e-4194-b14d-adf46d3d05db",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Outils & Canaux de Diffusion",
+        id: "49433d20-9200-402a-adba-e75f5d0caa9d",
+        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
+        topicLvl2: "Adoption & Formation",
       },
-      score: 0.4229375720024109,
+      score: -6.790342330932617,
     },
     {
       idea: {
@@ -992,11 +992,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Décisions stratégiques mal comprises par le terrain.",
       },
       topic: {
-        id: "3630953a-e680-46df-8916-3793c16afedf",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Stratégie & Positionnement",
+        id: "94a39cbb-c254-4ee3-baed-820abbb1fc86",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Gouvernance & Prises de Décision",
       },
-      score: 0.38188600540161133,
+      score: -10.345819473266602,
     },
     {
       idea: {
@@ -1004,11 +1004,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Surcharge d’informations → désengagement progressif.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        id: "e0f3d0db-9a9d-400e-996f-57bb546a67a0",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Communication interne",
       },
-      score: 0.5834742784500122,
+      score: -4.091066360473633,
     },
     {
       idea: {
@@ -1020,7 +1020,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "COMPÉTENCES ET FORMATION",
         topicLvl2: "Onboarding et transfert de connaissances",
       },
-      score: 0.6396199464797974,
+      score: 3.050635814666748,
     },
     {
       idea: {
@@ -1028,11 +1028,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Équipe trop dépendante de certains profils seniors.",
       },
       topic: {
-        id: "49433d20-9200-402a-adba-e75f5d0caa9d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Adoption & Formation",
+        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Outils & Environnement de Travail",
       },
-      score: 0.262718141078949,
+      score: -0.993749737739563,
     },
     {
       idea: {
@@ -1040,11 +1040,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Mauvais équilibre entre vie pro et vie perso.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        id: "45db4b3d-8d41-46c9-94e7-663ceeb53d3a",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Engagement & Qualité de Vie au Travail",
       },
-      score: 0.3438888192176819,
+      score: -5.355478286743164,
     },
     {
       idea: {
@@ -1052,11 +1052,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Communication trop descendante → manque d’écoute.",
       },
       topic: {
-        id: "f5c1a4e0-8c9e-4194-b14d-adf46d3d05db",
+        id: "e0f3d0db-9a9d-400e-996f-57bb546a67a0",
         topicLvl1: "COMMUNICATION",
-        topicLvl2: "Outils & Canaux de Diffusion",
+        topicLvl2: "Communication interne",
       },
-      score: 0.6533706784248352,
+      score: -6.867269992828369,
     },
     {
       idea: {
@@ -1064,11 +1064,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Projets prioritaires laissés de côté faute de suivi.",
       },
       topic: {
-        id: "7fce003a-9241-4e96-b1da-d51f9ea9b77d",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Maintenance & Mises à Jour",
+        id: "cc5ab279-b785-425c-8605-9d308f344ef5",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Organisation & Pilotage Allégés",
       },
-      score: 0.4361751675605774,
+      score: -3.6345536708831787,
     },
     {
       idea: {
@@ -1076,11 +1076,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Difficulté à recruter ou à fidéliser les bons profils.",
       },
       topic: {
-        id: "9fd07680-b8d0-4665-acba-69ec25277be9",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Management des compétences et évolutions professionnelles",
+        id: "e19bbf55-b63f-4d10-84a5-f1062678552b",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Recrutement & Intégration",
       },
-      score: 0.5139914155006409,
+      score: -7.029178619384766,
     },
     {
       idea: {
@@ -1088,11 +1088,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Harmoniser les méthodes entre équipes.",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        id: "713877d4-06c6-4dfc-8da9-9e68740db4dc",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Formation & Montée en Compétences",
       },
-      score: 0.6176297068595886,
+      score: 1.9052681922912598,
     },
     {
       idea: {
@@ -1100,11 +1100,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Créer un espace de partage inter-services.",
       },
       topic: {
-        id: "5a61f691-be6d-4a48-b8fd-e8781438abd9",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Communication et collaboration",
+        id: "25c07c59-4fbd-4ddf-b262-2599f579d153",
+        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
+        topicLvl2: "Outils & Systèmes d'Information Partagés",
       },
-      score: 0.61414635181427,
+      score: -0.72456955909729,
     },
     {
       idea: {
@@ -1112,11 +1112,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Mieux exploiter les retours clients.",
       },
       topic: {
-        id: "721bfb23-0816-44ab-844c-7323f0d40921",
+        id: "c45fd1c8-ca66-48e3-a0df-f34630dfaae3",
         topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Acquisition & Promotion",
+        topicLvl2: "Mesure & Amélioration Continue",
       },
-      score: 0.5321366786956787,
+      score: -0.38380852341651917,
     },
     {
       idea: {
@@ -1124,11 +1124,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Automatiser les tâches répétitives.",
       },
       topic: {
-        id: "3fea25a1-13cd-4473-9a20-08d829cdda9e",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Automatisation & Optimisation Opérationnelle",
+        id: "420ce74e-6f1a-4059-8af6-3d32e2e43caa",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Automatisation & Robotisation",
       },
-      score: 0.6943056583404541,
+      score: -0.7215960025787354,
     },
     {
       idea: {
@@ -1136,11 +1136,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Former les équipes à de nouveaux outils.",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
+        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        topicLvl2: "Outils & Environnement de Travail",
       },
-      score: 0.5691629648208618,
+      score: 3.5583577156066895,
     },
     {
       idea: {
@@ -1148,11 +1148,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Renforcer la culture de feedback.",
       },
       topic: {
-        id: "e2d22d02-9546-4de0-a39d-f6c23f121df6",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Culture & Engagement",
+        id: "45813b32-908e-4a9c-aa55-165552bb2576",
+        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
+        topicLvl2: "Culture & Coopération Interdirections",
       },
-      score: 0.5324845910072327,
+      score: -0.42095881700515747,
     },
     {
       idea: {
@@ -1160,11 +1160,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Valoriser davantage les réussites collectives.",
       },
       topic: {
-        id: "371f7344-b9cd-4179-978f-4f3988c2994b",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Expérience & Satisfaction",
+        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Outils & Environnement de Travail",
       },
-      score: 0.5101484060287476,
+      score: -6.505988121032715,
     },
     {
       idea: {
@@ -1172,11 +1172,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Clarifier les rôles et responsabilités.",
       },
       topic: {
-        id: "d303f4be-38d5-49a8-b5db-6b6aaf42611c",
-        topicLvl1: "SIMPLIFICATION",
-        topicLvl2: "Allègement Administratif & Réglementaire",
+        id: "b73e3d18-fd92-4323-ad94-0c10d6d27bf3",
+        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
+        topicLvl2: "Rôles, Responsabilités & Mutualisation des Ressources",
       },
-      score: 0.6207265257835388,
+      score: 6.66624641418457,
     },
     {
       idea: {
@@ -1184,11 +1184,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Améliorer la circulation de l’information.",
       },
       topic: {
-        id: "6df827ab-6e6b-46db-8969-b8acac63c603",
+        id: "e0f3d0db-9a9d-400e-996f-57bb546a67a0",
         topicLvl1: "COMMUNICATION",
-        topicLvl2: "Évaluation & Optimisation Continue",
+        topicLvl2: "Communication interne",
       },
-      score: 0.5469533801078796,
+      score: -0.30398544669151306,
     },
     {
       idea: {
@@ -1196,11 +1196,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Mieux prioriser les projets en fonction de la valeur.",
       },
       topic: {
-        id: "b88b5c20-e168-4397-9ed6-bffed89adbe5",
-        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
-        topicLvl2: "Architecture & Infrastructure",
+        id: "cc5ab279-b785-425c-8605-9d308f344ef5",
+        topicLvl1: "SIMPLIFICATION",
+        topicLvl2: "Organisation & Pilotage Allégés",
       },
-      score: 0.4775054156780243,
+      score: -8.735418319702148,
     },
     {
       idea: {
@@ -1208,11 +1208,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Développer la transversalité entre pôles.",
       },
       topic: {
-        id: "c45fd1c8-ca66-48e3-a0df-f34630dfaae3",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Mesure & Amélioration Continue",
+        id: "1f99c7d1-1480-4161-8a13-fcd9c1070e08",
+        topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
+        topicLvl2: "Communication & Transversalité",
       },
-      score: 0.45980241894721985,
+      score: -3.857426643371582,
     },
     {
       idea: {
@@ -1220,11 +1220,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Créer des rituels d’équipe (partages, bilans, cafés projets).",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
+        id: "17a7b9e7-fe47-4a47-970b-f540244be811",
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        topicLvl2: "Communication & Collaboration",
       },
-      score: 0.4937571883201599,
+      score: -0.9964872002601624,
     },
     {
       idea: {
@@ -1232,11 +1232,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Mettre en place un suivi clair des décisions prises.",
       },
       topic: {
-        id: "a22e9fa1-a1ae-448f-a328-05b559871ae0",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Standardisation & Formalisation des Processus",
+        id: "94a39cbb-c254-4ee3-baed-820abbb1fc86",
+        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
+        topicLvl2: "Gouvernance & Prises de Décision",
       },
-      score: 0.47964903712272644,
+      score: -1.9931910037994385,
     },
     {
       idea: {
@@ -1244,11 +1244,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Simplifier les process administratifs.",
       },
       topic: {
-        id: "d303f4be-38d5-49a8-b5db-6b6aaf42611c",
-        topicLvl1: "SIMPLIFICATION",
-        topicLvl2: "Allègement Administratif & Réglementaire",
+        id: "e1a39f77-941f-4c71-884c-a9d5f90c3a26",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Politiques, Processus RH & Administration du Personnel",
       },
-      score: 0.8067500591278076,
+      score: 2.089097023010254,
     },
     {
       idea: {
@@ -1256,11 +1256,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Favoriser la montée en compétences interne.",
       },
       topic: {
-        id: "9fd07680-b8d0-4665-acba-69ec25277be9",
+        id: "7712bd07-7f75-4234-9f66-5129b4bfbbb6",
         topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Management des compétences et évolutions professionnelles",
+        topicLvl2: "Outils et ressources d'apprentissage",
       },
-      score: 0.7172686457633972,
+      score: 4.705918788909912,
     },
     {
       idea: {
@@ -1268,11 +1268,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Donner plus d’autonomie sur les sujets opérationnels.",
       },
       topic: {
-        id: "d303f4be-38d5-49a8-b5db-6b6aaf42611c",
-        topicLvl1: "SIMPLIFICATION",
-        topicLvl2: "Allègement Administratif & Réglementaire",
+        id: "3107a683-d5dc-4d79-8d1b-ca6f768a97e2",
+        topicLvl1: "PROCESSUS",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.6028546094894409,
+      score: -5.701986789703369,
     },
     {
       idea: {
@@ -1280,11 +1280,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Intégrer plus de retours du terrain dans les choix stratégiques.",
       },
       topic: {
-        id: "721bfb23-0816-44ab-844c-7323f0d40921",
+        id: "c45fd1c8-ca66-48e3-a0df-f34630dfaae3",
         topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Acquisition & Promotion",
+        topicLvl2: "Mesure & Amélioration Continue",
       },
-      score: 0.4713623523712158,
+      score: -5.835434436798096,
     },
     {
       idea: {
@@ -1292,11 +1292,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Encourager les propositions d’amélioration.",
       },
       topic: {
-        id: "d303f4be-38d5-49a8-b5db-6b6aaf42611c",
-        topicLvl1: "SIMPLIFICATION",
-        topicLvl2: "Allègement Administratif & Réglementaire",
+        id: "6df827ab-6e6b-46db-8969-b8acac63c603",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Évaluation & Optimisation Continue",
       },
-      score: 0.45704570412635803,
+      score: 2.4629874229431152,
     },
     {
       idea: {
@@ -1304,11 +1304,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Développer de nouvelles synergies entre services.",
       },
       topic: {
-        id: "2c6e5d02-3ee0-4b59-9d28-2b103895331a",
+        id: "45813b32-908e-4a9c-aa55-165552bb2576",
         topicLvl1: "ORGANISATION DU TRAVAIL INTER-SERVICES/DIRECTIONS",
-        topicLvl2: "Processus & Workflows Inter-services",
+        topicLvl2: "Culture & Coopération Interdirections",
       },
-      score: 0.6027704477310181,
+      score: 0.3008138835430145,
     },
     {
       idea: {
@@ -1316,11 +1316,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Mieux équilibrer la charge de travail pour chacun.",
       },
       topic: {
-        id: "775f2eef-e388-494f-ad71-8b0c1c5ce299",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Outils & Environnement de Travail",
+        id: "45db4b3d-8d41-46c9-94e7-663ceeb53d3a",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Engagement & Qualité de Vie au Travail",
       },
-      score: 0.5547490119934082,
+      score: -2.3428027629852295,
     },
     {
       idea: {
@@ -1332,7 +1332,7 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
         topicLvl2: "Processus & Méthodes de Travail",
       },
-      score: 0.657340943813324,
+      score: -4.119361877441406,
     },
     {
       idea: {
@@ -1340,11 +1340,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Expérimenter de nouvelles formes de collaboration.",
       },
       topic: {
-        id: "5a61f691-be6d-4a48-b8fd-e8781438abd9",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Communication et collaboration",
+        id: "e19bbf55-b63f-4d10-84a5-f1062678552b",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Recrutement & Intégration",
       },
-      score: 0.7383647561073303,
+      score: -3.2306058406829834,
     },
     {
       idea: {
@@ -1352,11 +1352,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Mieux valoriser les initiatives individuelles.",
       },
       topic: {
-        id: "d303f4be-38d5-49a8-b5db-6b6aaf42611c",
+        id: "420ce74e-6f1a-4059-8af6-3d32e2e43caa",
         topicLvl1: "SIMPLIFICATION",
-        topicLvl2: "Allègement Administratif & Réglementaire",
+        topicLvl2: "Automatisation & Robotisation",
       },
-      score: 0.5310542583465576,
+      score: -9.951419830322266,
     },
     {
       idea: {
@@ -1364,11 +1364,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Réviser nos outils pour les adapter aux besoins réels.",
       },
       topic: {
-        id: "c45fd1c8-ca66-48e3-a0df-f34630dfaae3",
-        topicLvl1: "PARCOURS CLIENT",
-        topicLvl2: "Mesure & Amélioration Continue",
+        id: "452263de-43c4-4ccb-ae31-62583105a5e1",
+        topicLvl1: "RH & MANAGEMENT",
+        topicLvl2: "Formation & Développement des Compétences",
       },
-      score: 0.4565384089946747,
+      score: -3.696052074432373,
     },
     {
       idea: {
@@ -1376,11 +1376,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Organiser plus de retours d’expérience entre projets.",
       },
       topic: {
-        id: "3107a683-d5dc-4d79-8d1b-ca6f768a97e2",
-        topicLvl1: "PROCESSUS",
-        topicLvl2: "Organisation & Pilotage d'Équipe",
+        id: "6df827ab-6e6b-46db-8969-b8acac63c603",
+        topicLvl1: "COMMUNICATION",
+        topicLvl2: "Évaluation & Optimisation Continue",
       },
-      score: 0.5412476658821106,
+      score: -0.049189355224370956,
     },
     {
       idea: {
@@ -1388,11 +1388,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Créer un canal unique pour centraliser les infos utiles.",
       },
       topic: {
-        id: "7712bd07-7f75-4234-9f66-5129b4bfbbb6",
-        topicLvl1: "COMPÉTENCES ET FORMATION",
-        topicLvl2: "Outils et ressources d'apprentissage",
+        id: "c52f66cd-65ae-4571-b961-175f2cc23025",
+        topicLvl1: "PROCESSUS",
+        topicLvl2: "Cartographie & Gestion de la Connaissance",
       },
-      score: 0.4559130072593689,
+      score: -5.53456449508667,
     },
     {
       idea: {
@@ -1400,11 +1400,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Simplifier la chaîne de validation des décisions.",
       },
       topic: {
-        id: "8474348d-e979-43f8-b0f7-e45edc9e66f5",
+        id: "cc5ab279-b785-425c-8605-9d308f344ef5",
         topicLvl1: "SIMPLIFICATION",
-        topicLvl2: "Refonte & Rationalisation des Processus",
+        topicLvl2: "Organisation & Pilotage Allégés",
       },
-      score: 0.6003687381744385,
+      score: -0.0025215819478034973,
     },
     {
       idea: {
@@ -1412,11 +1412,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Développer la culture du feedback constructif.",
       },
       topic: {
-        id: "713877d4-06c6-4dfc-8da9-9e68740db4dc",
+        id: "e2d22d02-9546-4de0-a39d-f6c23f121df6",
         topicLvl1: "COMMUNICATION",
-        topicLvl2: "Formation & Montée en Compétences",
+        topicLvl2: "Culture & Engagement",
       },
-      score: 0.5060053467750549,
+      score: -9.269805908203125,
     },
     {
       idea: {
@@ -1424,11 +1424,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Impliquer davantage le terrain dans les choix stratégiques.",
       },
       topic: {
-        id: "3630953a-e680-46df-8916-3793c16afedf",
-        topicLvl1: "COMMUNICATION",
-        topicLvl2: "Stratégie & Positionnement",
+        id: "b88b5c20-e168-4397-9ed6-bffed89adbe5",
+        topicLvl1: "AMELIORATIONS SI ET OUTILS IT",
+        topicLvl2: "Architecture & Infrastructure",
       },
-      score: 0.5038695335388184,
+      score: -8.162395477294922,
     },
     {
       idea: {
@@ -1436,11 +1436,11 @@ export const PARAPHRASE_MULTILINGUAL_RES = {
         text: "Donner plus de visibilité sur les réussites d’équipe.",
       },
       topic: {
-        id: "63458b60-f315-43a2-a913-91948c3470cd",
-        topicLvl1: "ORGANISATION DU TRAVAIL EN EQUIPES",
-        topicLvl2: "Structure d'équipe, Rôles & Responsabilités",
+        id: "3107a683-d5dc-4d79-8d1b-ca6f768a97e2",
+        topicLvl1: "PROCESSUS",
+        topicLvl2: "Organisation & Pilotage d'Équipe",
       },
-      score: 0.5798793435096741,
+      score: 1.1451749801635742,
     },
   ],
 };

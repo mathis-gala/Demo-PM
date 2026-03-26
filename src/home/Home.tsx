@@ -1,63 +1,75 @@
-import { useMemo, useRef, useState } from 'react'
-import LoadingBarView from './LoadingBarView'
-import Topics from './Topics'
-import { PARAPHRASE_MULTILINGUAL_RES } from '../res/paraphrase-multilingual'
+import { useMemo, useRef, useState } from "react";
+import LoadingBarView from "./LoadingBarView";
+import Topics from "./Topics";
+import { PARAPHRASE_MULTILINGUAL_RES } from "../res/classic";
+import { DISTILUSE_COSINE_WITH_DESC_RES } from "../res/distiluse-cosine";
+import { CROSS_ONLY_RES } from "../res/cross-only";
+import { HYBRID_RES } from "../res/hybrid";
 
 const RESOURCES = [
-  {
-    id: 'paraphrase-multilingual-MiniLM-L12-v2',
-    label: 'paraphrase-multilingual-MiniLM-L12-v2',
-    res: PARAPHRASE_MULTILINGUAL_RES,
-  },
-] as const
+  PARAPHRASE_MULTILINGUAL_RES,
+  DISTILUSE_COSINE_WITH_DESC_RES,
+  CROSS_ONLY_RES,
+  HYBRID_RES,
+] as const;
 
 export default function Home() {
-  const [selectedId, setSelectedId] = useState<(typeof RESOURCES)[number]['id']>(RESOURCES[0].id)
-  const [classifiedId, setClassifiedId] = useState<(typeof RESOURCES)[number]['id'] | null>(null)
-  const [isClassifying, setIsClassifying] = useState(false)
-  const [progress, setProgress] = useState(0)
-  const intervalRef = useRef<number | null>(null)
+  const [selectedName, setSelectedName] = useState<
+    (typeof RESOURCES)[number]["name"]
+  >(RESOURCES[0].name);
+  const [classifiedName, setClassifiedName] = useState<
+    (typeof RESOURCES)[number]["name"] | null
+  >(null);
+  const [isClassifying, setIsClassifying] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const intervalRef = useRef<number | null>(null);
 
-  const selected = useMemo(() => RESOURCES.find((r) => r.id === selectedId) ?? RESOURCES[0], [selectedId])
+  const selected = useMemo(
+    () => RESOURCES.find((r) => r.name === selectedName) ?? RESOURCES[0],
+    [selectedName],
+  );
   const classified = useMemo(
-    () => (classifiedId ? RESOURCES.find((r) => r.id === classifiedId) ?? null : null),
-    [classifiedId],
-  )
+    () =>
+      classifiedName
+        ? (RESOURCES.find((r) => r.name === classifiedName) ?? null)
+        : null,
+    [classifiedName],
+  );
 
-  const onChangeModel = (id: (typeof RESOURCES)[number]['id']) => {
+  const onChangeModel = (name: (typeof RESOURCES)[number]["name"]) => {
     if (intervalRef.current) {
-      window.clearInterval(intervalRef.current)
-      intervalRef.current = null
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
     }
-    setSelectedId(id)
-    setClassifiedId(null)
-    setIsClassifying(false)
-    setProgress(0)
-  }
+    setSelectedName(name);
+    setClassifiedName(null);
+    setIsClassifying(false);
+    setProgress(0);
+  };
 
   const onClassify = () => {
-    if (isClassifying) return
+    if (isClassifying) return;
 
-    const durationMs = Math.max(120, selected.res.time)
-    setIsClassifying(true)
-    setProgress(0)
-    setClassifiedId(null)
+    const durationMs = Math.max(120, selected.time);
+    setIsClassifying(true);
+    setProgress(0);
+    setClassifiedName(null);
 
-    const start = performance.now()
-    if (intervalRef.current) window.clearInterval(intervalRef.current)
+    const start = performance.now();
+    if (intervalRef.current) window.clearInterval(intervalRef.current);
 
     intervalRef.current = window.setInterval(() => {
-      const now = performance.now()
-      const p = Math.min(1, (now - start) / durationMs)
-      setProgress(p)
+      const now = performance.now();
+      const p = Math.min(1, (now - start) / durationMs);
+      setProgress(p);
       if (p >= 1) {
-        if (intervalRef.current) window.clearInterval(intervalRef.current)
-        intervalRef.current = null
-        setIsClassifying(false)
-        setClassifiedId(selectedId)
+        if (intervalRef.current) window.clearInterval(intervalRef.current);
+        intervalRef.current = null;
+        setIsClassifying(false);
+        setClassifiedName(selectedName);
       }
-    }, 16)
-  }
+    }, 16);
+  };
 
   return (
     <div className="min-h-full bg-gradient-to-b from-slate-50 to-white text-slate-900">
@@ -67,28 +79,41 @@ export default function Home() {
             <div>
               <h1 className="text-2xl font-semibold tracking-tight">Demo PM</h1>
               <p className="mt-2 text-sm text-slate-600">
-                Choisis parmi les modèles pour voir les résultats des classifications. L’objectif est de simuler la
-                réactivité (temps de réponse) et la pertinence du modèle, comme si un calcul était en cours.
+                Choisis parmi les modèles pour voir les résultats des
+                classifications. L’objectif est de simuler la réactivité (temps
+                de réponse) et la pertinence du modèle, comme si un calcul était
+                en cours.
               </p>
             </div>
 
             <div className="w-full sm:w-[560px]">
-              <label className="block text-xs font-medium text-slate-700">Modèle</label>
+              <label className="block text-xs font-medium text-slate-700">
+                Modèle
+              </label>
               <div className="mt-2 flex flex-col gap-3">
                 <select
-                  value={selectedId}
-                  onChange={(e) => onChangeModel(e.target.value as (typeof RESOURCES)[number]['id'])}
+                  value={selectedName}
+                  onChange={(e) =>
+                    onChangeModel(
+                      e.target.value as (typeof RESOURCES)[number]["name"],
+                    )
+                  }
                   disabled={isClassifying}
                   className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 outline-none ring-0 transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-200/60"
                 >
-                  {RESOURCES.map((r) => (
-                    <option key={r.id} value={r.id} className="bg-white">
-                      {r.label}
+                  {RESOURCES.map((res) => (
+                    <option
+                      key={res.name}
+                      value={res.name}
+                      className="bg-white"
+                    >
+                      {res.name}
                     </option>
                   ))}
                 </select>
                 <p className="text-xs text-slate-500">
-                  Currently loaded: {RESOURCES.length} • Temps simulé: {selected.res.time}ms
+                  Currently loaded: {RESOURCES.length} • Temps simulé:{" "}
+                  {selected.time}ms
                 </p>
               </div>
             </div>
@@ -96,18 +121,20 @@ export default function Home() {
 
           <div className="mt-10">
             {classified ? (
-              <Topics res={classified.res} />
+              <Topics res={classified} />
             ) : isClassifying ? (
               <LoadingBarView
                 title="Classification en cours…"
                 subtitle="Simulation de calcul pour représenter la réactivité du modèle."
-                durationMs={Math.max(120, selected.res.time)}
+                durationMs={Math.max(120, selected.time)}
                 progress={progress}
               />
             ) : (
               <div className="flex min-h-[260px] items-center justify-center">
                 <div className="text-center">
-                  <p className="text-sm text-slate-600">Clique pour lancer la simulation et afficher les topics.</p>
+                  <p className="text-sm text-slate-600">
+                    Clique pour lancer la simulation et afficher les topics.
+                  </p>
                   <button
                     type="button"
                     onClick={onClassify}
@@ -122,5 +149,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  )
+  );
 }
