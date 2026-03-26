@@ -5,44 +5,36 @@ import { PARAPHRASE_MULTILINGUAL_RES } from "../res/classic";
 import { DISTILUSE_COSINE_WITH_DESC_RES } from "../res/distiluse-cosine";
 import { CROSS_ONLY_RES } from "../res/cross-only";
 import { HYBRID_RES } from "../res/hybrid";
+import { HYBRID_NO_ORPHANS_RES } from "../res/hybrid-no-orphans";
 
 const RESOURCES = [
   PARAPHRASE_MULTILINGUAL_RES,
   DISTILUSE_COSINE_WITH_DESC_RES,
   CROSS_ONLY_RES,
   HYBRID_RES,
+  HYBRID_NO_ORPHANS_RES,
 ] as const;
 
 export default function Home() {
-  const [selectedName, setSelectedName] = useState<
-    (typeof RESOURCES)[number]["name"]
-  >(RESOURCES[0].name);
-  const [classifiedName, setClassifiedName] = useState<
-    (typeof RESOURCES)[number]["name"] | null
-  >(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [classifiedIndex, setClassifiedIndex] = useState<number | null>(null);
   const [isClassifying, setIsClassifying] = useState(false);
   const [progress, setProgress] = useState(0);
   const intervalRef = useRef<number | null>(null);
 
-  const selected = useMemo(
-    () => RESOURCES.find((r) => r.name === selectedName) ?? RESOURCES[0],
-    [selectedName],
-  );
+  const selected = useMemo(() => RESOURCES[selectedIndex] ?? RESOURCES[0], [selectedIndex]);
   const classified = useMemo(
-    () =>
-      classifiedName
-        ? (RESOURCES.find((r) => r.name === classifiedName) ?? null)
-        : null,
-    [classifiedName],
+    () => (classifiedIndex !== null ? (RESOURCES[classifiedIndex] ?? null) : null),
+    [classifiedIndex],
   );
 
-  const onChangeModel = (name: (typeof RESOURCES)[number]["name"]) => {
+  const onChangeModel = (index: number) => {
     if (intervalRef.current) {
       window.clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
-    setSelectedName(name);
-    setClassifiedName(null);
+    setSelectedIndex(index);
+    setClassifiedIndex(null);
     setIsClassifying(false);
     setProgress(0);
   };
@@ -53,7 +45,7 @@ export default function Home() {
     const durationMs = Math.max(120, selected.time);
     setIsClassifying(true);
     setProgress(0);
-    setClassifiedName(null);
+    setClassifiedIndex(null);
 
     const start = performance.now();
     if (intervalRef.current) window.clearInterval(intervalRef.current);
@@ -66,7 +58,7 @@ export default function Home() {
         if (intervalRef.current) window.clearInterval(intervalRef.current);
         intervalRef.current = null;
         setIsClassifying(false);
-        setClassifiedName(selectedName);
+        setClassifiedIndex(selectedIndex);
       }
     }, 16);
   };
@@ -92,22 +84,20 @@ export default function Home() {
               </label>
               <div className="mt-2 flex flex-col gap-3">
                 <select
-                  value={selectedName}
+                  value={selectedIndex}
                   onChange={(e) =>
-                    onChangeModel(
-                      e.target.value as (typeof RESOURCES)[number]["name"],
-                    )
+                    onChangeModel(Number(e.target.value))
                   }
                   disabled={isClassifying}
                   className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 outline-none ring-0 transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-200/60"
                 >
-                  {RESOURCES.map((res) => (
+                  {RESOURCES.map((res, idx) => (
                     <option
-                      key={res.name}
-                      value={res.name}
+                      key={`${res.name}-${idx}`}
+                      value={idx}
                       className="bg-white"
                     >
-                      {res.name}
+                      {"origin" in res ? `${res.name} (no orphans)` : res.name}
                     </option>
                   ))}
                 </select>
