@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/home/home.tsx","./src/home/ideas.tsx","./src/home/loadingbarview.tsx","./src/home/topics.tsx","./src/home/topiccolors.ts","./src/res/mpnet-base.ts","./src/res/paraphrase-multilingual.ts"],"version":"5.9.3"}
