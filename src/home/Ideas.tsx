@@ -1,16 +1,17 @@
 type IdeaItem = {
-  id: string
-  text: string
-  score?: number
-  moved?: boolean
-}
+  id: string;
+  text: string;
+  score?: number;
+  moved?: boolean;
+  movedFrom?: string;
+};
 
 export default function Ideas({
   ideas,
-  scoreBadgeClassName = 'border-slate-200 bg-white text-slate-700',
+  scoreBadgeClassName = "border-slate-200 bg-white text-slate-700",
 }: {
-  ideas: IdeaItem[]
-  scoreBadgeClassName?: string
+  ideas: IdeaItem[];
+  scoreBadgeClassName?: string;
 }) {
   return (
     <ul className="mt-4 grid gap-2">
@@ -22,23 +23,31 @@ export default function Ideas({
           <div className="flex items-start justify-between gap-3">
             <div className="flex items-start gap-2">
               {idea.moved ? (
-                <span
-                  title="Idée déplacée depuis une autre catégorie"
-                  className="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-700"
-                >
-                  <svg viewBox="0 0 20 20" className="h-3 w-3 fill-current" aria-hidden="true">
+                <span className="group/tooltip relative mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+                  <svg
+                    viewBox="0 0 20 20"
+                    className="h-3 w-3 fill-current"
+                    aria-hidden="true"
+                  >
                     <path d="M10 2 1 18h18L10 2Zm0 5a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0V8a1 1 0 0 1 1-1Zm0 9a1.25 1.25 0 1 1 0-2.5A1.25 1.25 0 0 1 10 16Z" />
                   </svg>
+                  <span className="pointer-events-none absolute left-1/2 top-full z-20 mt-1 w-64 -translate-x-1/2 rounded-md bg-slate-900 px-2 py-1 text-[11px] font-medium text-white opacity-0 shadow transition-opacity group-hover/tooltip:opacity-100">
+                    {idea.movedFrom
+                      ? `Idée déplacée depuis: ${idea.movedFrom}`
+                      : "Idée déplacée depuis une autre catégorie"}
+                  </span>
                 </span>
               ) : null}
-              <p className="text-sm leading-relaxed text-slate-800">{idea.text}</p>
+              <p className="text-sm leading-relaxed text-slate-800">
+                {idea.text}
+              </p>
             </div>
-            {typeof idea.score === 'number' ? (
+            {typeof idea.score === "number" ? (
               <span
                 className={[
-                  'shrink-0 rounded-full border px-2 py-0.5 text-[11px] font-medium ring-1 ring-inset',
+                  "shrink-0 rounded-full border px-2 py-0.5 text-[11px] font-medium ring-1 ring-inset",
                   scoreBadgeClassName,
-                ].join(' ')}
+                ].join(" ")}
               >
                 score {Math.round(idea.score * 1000) / 1000}
               </span>
@@ -48,5 +57,5 @@ export default function Ideas({
         </li>
       ))}
     </ul>
-  )
+  );
 }

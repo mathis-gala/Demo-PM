@@ -3,7 +3,7 @@ import { HYBRID_RES } from "./hybrid";
 export const HYBRID_NO_ORPHANS_RES = {
   time: 2770,
   origin: HYBRID_RES,
-  name: "L6-V2 + Distiluse Hybrid With Desc",
+  name: "L6-V2 + Distiluse Hybrid No Orphans",
   results: [
     {
       idea: {
