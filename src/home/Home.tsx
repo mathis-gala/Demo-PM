@@ -3,8 +3,9 @@ import LoadingBarView from "./LoadingBarView";
 import Topics from "./Topics";
 import { HYBRID_RES } from "../res/hybrid";
 import { HYBRID_NO_ORPHANS_RES } from "../res/hybrid-no-orphans";
+import { CURRENT_RES } from "../res/current";
 
-const RESOURCES = [HYBRID_RES, HYBRID_NO_ORPHANS_RES] as const;
+const RESOURCES = [CURRENT_RES, HYBRID_RES, HYBRID_NO_ORPHANS_RES] as const;
 
 export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -58,6 +59,16 @@ export default function Home() {
     }, 16);
   };
 
+  const onSkipClassify = () => {
+    if (intervalRef.current) {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    setProgress(1);
+    setIsClassifying(false);
+    setClassifiedIndex(selectedIndex);
+  };
+
   return (
     <div className="min-h-full bg-gradient-to-b from-slate-50 to-white text-slate-900">
       <div className="mx-auto max-w-6xl px-6 py-12">
@@ -106,12 +117,23 @@ export default function Home() {
             {classified ? (
               <Topics res={classified} />
             ) : isClassifying ? (
-              <LoadingBarView
-                title="Classification en cours…"
-                subtitle="Simulation de calcul pour représenter la réactivité du modèle."
-                durationMs={Math.max(120, selected.time)}
-                progress={progress}
-              />
+              <div className="space-y-4">
+                <LoadingBarView
+                  title="Classification en cours…"
+                  subtitle="Simulation de calcul pour représenter la réactivité du modèle."
+                  durationMs={Math.max(120, selected.time)}
+                  progress={progress}
+                />
+                <div className="flex justify-center">
+                  <button
+                    type="button"
+                    onClick={onSkipClassify}
+                    className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
+                  >
+                    Skip loading
+                  </button>
+                </div>
+              </div>
             ) : (
               <div className="flex min-h-[260px] items-center justify-center">
                 <div className="text-center">
