@@ -1,19 +1,10 @@
 import { useMemo, useRef, useState } from "react";
 import LoadingBarView from "./LoadingBarView";
 import Topics from "./Topics";
-import { PARAPHRASE_MULTILINGUAL_RES } from "../res/classic";
-import { DISTILUSE_COSINE_WITH_DESC_RES } from "../res/distiluse-cosine";
-import { CROSS_ONLY_RES } from "../res/cross-only";
 import { HYBRID_RES } from "../res/hybrid";
 import { HYBRID_NO_ORPHANS_RES } from "../res/hybrid-no-orphans";
 
-const RESOURCES = [
-  PARAPHRASE_MULTILINGUAL_RES,
-  DISTILUSE_COSINE_WITH_DESC_RES,
-  CROSS_ONLY_RES,
-  HYBRID_RES,
-  HYBRID_NO_ORPHANS_RES,
-] as const;
+const RESOURCES = [HYBRID_RES, HYBRID_NO_ORPHANS_RES] as const;
 
 export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -22,9 +13,13 @@ export default function Home() {
   const [progress, setProgress] = useState(0);
   const intervalRef = useRef<number | null>(null);
 
-  const selected = useMemo(() => RESOURCES[selectedIndex] ?? RESOURCES[0], [selectedIndex]);
+  const selected = useMemo(
+    () => RESOURCES[selectedIndex] ?? RESOURCES[0],
+    [selectedIndex],
+  );
   const classified = useMemo(
-    () => (classifiedIndex !== null ? (RESOURCES[classifiedIndex] ?? null) : null),
+    () =>
+      classifiedIndex !== null ? (RESOURCES[classifiedIndex] ?? null) : null,
     [classifiedIndex],
   );
 
@@ -69,7 +64,7 @@ export default function Home() {
         <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <h1 className="text-2xl font-semibold tracking-tight">Demo PM</h1>
+              <h1 className="text-2xl font-semibold tracking-tight">Demo AI</h1>
               <p className="mt-2 text-sm text-slate-600">
                 Choisis parmi les modèles pour voir les résultats des
                 classifications. L’objectif est de simuler la réactivité (temps
@@ -85,9 +80,7 @@ export default function Home() {
               <div className="mt-2 flex flex-col gap-3">
                 <select
                   value={selectedIndex}
-                  onChange={(e) =>
-                    onChangeModel(Number(e.target.value))
-                  }
+                  onChange={(e) => onChangeModel(Number(e.target.value))}
                   disabled={isClassifying}
                   className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 outline-none ring-0 transition focus:border-indigo-400 focus:ring-2 focus:ring-indigo-200/60"
                 >

@@ -1,6 +1,6 @@
 export const HYBRID_RES = {
   time: 2770,
-  name: "L6-V2 + Distiluse Hybrid With Desc",
+  name: "L6-V2 + Distiluse Hybrid",
   results: [
     {
       idea: {
