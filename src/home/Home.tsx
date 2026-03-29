@@ -4,6 +4,7 @@ import Topics from "./Topics";
 import { HYBRID_RES } from "../res/hybrid";
 import { HYBRID_NO_ORPHANS_RES } from "../res/hybrid-no-orphans";
 import { CURRENT_RES } from "../res/current";
+import { formatTime } from "../utils/formatTime";
 
 const RESOURCES = [CURRENT_RES, HYBRID_RES, HYBRID_NO_ORPHANS_RES] as const;
 
@@ -107,7 +108,7 @@ export default function Home() {
                 </select>
                 <p className="text-xs text-slate-500">
                   Currently loaded: {RESOURCES.length} • Temps simulé:{" "}
-                  {selected.time}ms
+                  {formatTime(selected.time)}
                 </p>
               </div>
             </div>
