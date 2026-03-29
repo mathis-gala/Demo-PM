@@ -1,3 +1,5 @@
+import { formatTime } from "../utils/formatTime";
+
 export default function LoadingBarView({
   title,
   subtitle,
@@ -22,7 +24,7 @@ export default function LoadingBarView({
         <div className="mt-6 grid gap-2">
           <div className="flex items-center justify-between text-xs text-slate-600">
             <span>
-              Temps simulé: <span className="font-medium text-slate-900">{durationMs}ms</span>
+              Temps simulé: <span className="font-medium text-slate-900">{formatTime(durationMs)}</span>
             </span>
             <span className="tabular-nums">{pct}%</span>
           </div>

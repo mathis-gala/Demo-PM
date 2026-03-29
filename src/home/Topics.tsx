@@ -1,5 +1,6 @@
 import Ideas from "./Ideas";
 import { colorForTopicLvl1, colorForTopicLvl2 } from "./topicColors";
+import { formatTime } from "../utils/formatTime";
 
 type ResItem = {
   idea: { id: string; text: string };
@@ -126,7 +127,7 @@ export default function Topics({ res }: { res: ResLike }) {
           </h2>
           <p className="mt-1 text-sm text-slate-600">
             {grouped.length} themes • {totalSubtopics} subthemes •{" "}
-            {res.results.length} idées • {res.time}ms
+            {res.results.length} idées • {formatTime(res.time)}
           </p>
         </div>
         <div className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs text-slate-600 shadow-sm">
