@@ -136,6 +136,40 @@ export default function Topics({ res }: { res: ResLike }) {
         </div>
       </div>
 
+      <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-2.5 text-[12px] text-slate-600">
+        <span className="font-medium text-slate-500">Légende</span>
+
+        <span className="flex items-center gap-1.5">
+          <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-[11px] font-bold text-emerald-700">
+            +
+          </span>
+          Topic créé (nouveau)
+        </span>
+
+        <span className="flex items-center gap-1.5">
+          <span className="inline-flex h-4 w-4 items-center justify-center rounded-full bg-amber-100 text-amber-700">
+            <svg viewBox="0 0 20 20" className="h-3 w-3 fill-current" aria-hidden="true">
+              <path d="M10 2 1 18h18L10 2Zm0 5a1 1 0 0 1 1 1v4a1 1 0 1 1-2 0V8a1 1 0 0 1 1-1Zm0 9a1.25 1.25 0 1 1 0-2.5A1.25 1.25 0 0 1 10 16Z" />
+            </svg>
+          </span>
+          Idée déplacée
+        </span>
+
+        <span className="flex items-center gap-1.5">
+          <span className="shrink-0 rounded-full border border-slate-200 bg-white px-2 py-0.5 text-[11px] font-medium text-slate-700 ring-1 ring-inset ring-slate-200">
+            score 0.92
+          </span>
+          Score de confiance
+        </span>
+
+        <span className="flex items-center gap-1.5">
+          <span className="shrink-0 rounded-full border border-slate-200 bg-slate-50 px-2 py-0.5 text-[11px] font-medium text-slate-700">
+            42
+          </span>
+          Nombre d'idées
+        </span>
+      </div>
+
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
         {grouped.map(({ topicLvl1, subtopics, ideasCount }) => {
           const cLvl1 = colorForTopicLvl1(topicLvl1);
