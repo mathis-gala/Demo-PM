@@ -5,8 +5,16 @@ import { HYBRID_RES } from "../res/hybrid";
 import { HYBRID_NO_ORPHANS_RES } from "../res/hybrid-no-orphans";
 import { CURRENT_RES } from "../res/current";
 import { formatTime } from "../utils/formatTime";
+import { COHERE_EMBED_RES } from "../res/cohere-embed";
+import { COHERE_EMBED_RES_NO_ORPHANS } from "../res/cohere-embe-no-orphans";
 
-const RESOURCES = [CURRENT_RES, HYBRID_RES, HYBRID_NO_ORPHANS_RES] as const;
+const RESOURCES = [
+  CURRENT_RES,
+  HYBRID_RES,
+  HYBRID_NO_ORPHANS_RES,
+  COHERE_EMBED_RES,
+  COHERE_EMBED_RES_NO_ORPHANS,
+] as const;
 
 export default function Home() {
   const [selectedIndex, setSelectedIndex] = useState(0);
