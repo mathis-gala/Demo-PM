@@ -115,7 +115,7 @@ export default function Home() {
                   ))}
                 </select>
                 <p className="text-xs text-slate-500">
-                  Currently loaded: {RESOURCES.length} • Temps simulé:{" "}
+                  Chargé actuellement : {RESOURCES.length} • Temps simulé:{" "}
                   {formatTime(selected.time)}
                 </p>
               </div>
@@ -139,7 +139,7 @@ export default function Home() {
                     onClick={onSkipClassify}
                     className="inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50"
                   >
-                    Skip loading
+                    Ignorer le chargement
                   </button>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export default function Home() {
               <div className="flex min-h-[260px] items-center justify-center">
                 <div className="text-center">
                   <p className="text-sm text-slate-600">
-                    Clique pour lancer la simulation et afficher les topics.
+                    Clique pour lancer la simulation et afficher les catégories.
                   </p>
                   <button
                     type="button"

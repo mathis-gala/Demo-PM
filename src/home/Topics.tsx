@@ -123,15 +123,15 @@ export default function Topics({ res }: { res: ResLike }) {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 className="text-lg font-semibold tracking-tight text-slate-900">
-            Topics
+            Catégories
           </h2>
           <p className="mt-1 text-sm text-slate-600">
-            {grouped.length} themes • {totalSubtopics} subthemes •{" "}
+            {grouped.length} catégories • {totalSubtopics} sous-catégories •{" "}
             {res.results.length} idées • {formatTime(res.time)}
           </p>
         </div>
         <div className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs text-slate-600 shadow-sm">
-          <span className="text-slate-500">Model</span>{" "}
+          <span className="text-slate-500">Modèle</span>{" "}
           <span className="font-medium text-slate-900">{res.name}</span>
         </div>
       </div>
@@ -143,7 +143,7 @@ export default function Topics({ res }: { res: ResLike }) {
           <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-[11px] font-bold text-emerald-700">
             +
           </span>
-          Topic créé (nouveau)
+          Catégorie créée (nouveau)
         </span>
 
         <span className="flex items-center gap-1.5">
@@ -202,7 +202,7 @@ export default function Topics({ res }: { res: ResLike }) {
                         </span>
                         <span className="text-[11px] text-slate-500">•</span>
                         <span className="text-[11px] text-slate-600">
-                          {subtopics.length} subthemes
+                            {subtopics.length} sous-catégories
                         </span>
                       </div>
                     </div>
@@ -233,15 +233,15 @@ export default function Topics({ res }: { res: ResLike }) {
                           {topic.created ?? false ? (
                             <span
                               className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-[11px] font-bold text-emerald-700"
-                              title="Created topic"
-                              aria-label="Created topic"
+                              title="Catégorie créée"
+                              aria-label="Catégorie créée"
                             >
                               +
                             </span>
                           ) : null}
                           <span className="text-[11px] text-slate-500">•</span>
                           <span className="text-[11px] text-slate-600">
-                            Topic ID: {topic.id.slice(0, 8)}…
+                            ID de catégorie : {topic.id.slice(0, 8)}…
                           </span>
                           <span className="text-[11px] text-slate-500">•</span>
                           <span className="text-[11px] text-slate-600">
