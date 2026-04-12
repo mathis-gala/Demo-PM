@@ -1,6 +1,5 @@
-import Home from './home/Home'
+import { AIDemo } from './features/ai';
 
 export default function App() {
-  return <Home />
+  return <AIDemo />;
 }
-

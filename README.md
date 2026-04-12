@@ -1,23 +1,21 @@
 # Demo PM
 
-Vite + React + TypeScript + Tailwind, deployable to GitHub Pages via GitHub Actions.
+Ce dépôt sert de démonstrateur et d’atelier expérimental pour valider des idées avant de les intégrer dans un vrai projet. Il rassemble plusieurs approches, résultats et prototypes utilisables pour montrer à un product manager, un client ou un lead dev ce qui est possible, tester des concepts et décider de l’orientation avant de les implémenter en production.
 
-## Development
+## Objectif
+
+- Publier des résultats ou des prototypes.
+- Présenter différentes approches techniques ou UX.
+- Tester des mécanismes avant validation.
+- Faire des retours rapides à un client, lead dev ou PM.
+
+## Résultats
+
+Vous pouvez voir les résultats ici : https://mathis-gala.github.io/Demo-PM/
+
+## Local
 
 ```bash
 npm install
 npm run dev
 ```
-
-## Build
-
-```bash
-npm run build
-npm run preview
-```
-
-## GitHub Pages
-
-- The workflow in `.github/workflows/deploy.yml` deploys on pushes to `main`.
-- In your repo settings, set **Pages** to **GitHub Actions** as the source (once).
-
