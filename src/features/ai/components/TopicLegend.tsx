@@ -1,6 +1,6 @@
-import { AlertTriangle } from "lucide-react";
-import { Card } from "@ui/Card";
-import { Badge } from "@ui/Badge";
+import { AlertTriangle } from 'lucide-react';
+import { Card } from '@ui/Card';
+import { Badge } from '@ui/Badge';
 
 export function TopicLegend() {
   return (

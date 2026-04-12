@@ -30,7 +30,7 @@ export type GroupedTopicIdea = {
 };
 
 export type GroupedTopicSubtopic = {
-  topic: ResItem["topic"];
+  topic: ResItem['topic'];
   ideas: GroupedTopicIdea[];
 };
 

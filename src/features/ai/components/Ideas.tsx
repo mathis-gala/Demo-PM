@@ -1,11 +1,11 @@
-import { AlertTriangle } from "lucide-react";
-import { cn } from "@utils/cn";
-import { Badge } from "@ui/Badge";
-import type { IdeaItem } from "../types";
+import { AlertTriangle } from 'lucide-react';
+import { cn } from '@utils/cn';
+import { Badge } from '@ui/Badge';
+import type { IdeaItem } from '../types';
 
 export default function Ideas({
   ideas,
-  scoreBadgeClassName = "border-slate-200 bg-white text-slate-700",
+  scoreBadgeClassName = 'border-slate-200 bg-white text-slate-700',
 }: {
   ideas: IdeaItem[];
   scoreBadgeClassName?: string;
@@ -25,7 +25,7 @@ export default function Ideas({
                   <span className="pointer-events-none absolute left-1/2 top-full z-20 mt-1 w-64 -translate-x-1/2 rounded-md bg-slate-900 px-2 py-1 text-[11px] font-medium text-white opacity-0 shadow transition-opacity group-hover/tooltip:opacity-100">
                     {idea.movedFrom
                       ? `Idée déplacée depuis: ${idea.movedFrom}`
-                      : "Idée déplacée depuis une autre catégorie"}
+                      : 'Idée déplacée depuis une autre catégorie'}
                   </span>
                 </span>
               )}
@@ -34,8 +34,8 @@ export default function Ideas({
             {idea.score && (
               <Badge
                 className={cn(
-                  "shrink-0 rounded-full px-2 py-0.5 text-[11px] font-medium ring-1 ring-inset",
-                  scoreBadgeClassName,
+                  'shrink-0 rounded-full px-2 py-0.5 text-[11px] font-medium ring-1 ring-inset',
+                  scoreBadgeClassName
                 )}
               >
                 score {Math.round(idea.score * 1000) / 1000}

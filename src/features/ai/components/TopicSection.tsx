@@ -1,17 +1,15 @@
-import { Card } from "@ui/Card";
-import { colorForTopicLvl1, colorForTopicLvl2 } from "../utils/topicColors";
-import { pluralize } from "@utils/pluralize";
-import type { GroupedTopic } from "../types";
-import Ideas from "./Ideas";
+import { Card } from '@ui/Card';
+import { colorForTopicLvl1, colorForTopicLvl2 } from '../utils/topicColors';
+import { pluralize } from '@utils/pluralize';
+import type { GroupedTopic } from '../types';
+import Ideas from './Ideas';
 
 export function TopicSection({ group }: { group: GroupedTopic }) {
   const { topicLvl1, subtopics, ideasCount } = group;
   const cLvl1 = colorForTopicLvl1(topicLvl1);
 
   return (
-    <Card
-      className={`relative overflow-visible p-5 transition hover:shadow ${cLvl1.border}`}
-    >
+    <Card className={`relative overflow-visible p-5 transition hover:shadow ${cLvl1.border}`}>
       <div
         className={`pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full blur-3xl ${cLvl1.softBg}`}
       />
@@ -47,10 +45,8 @@ export function TopicSection({ group }: { group: GroupedTopic }) {
               <div key={topic.id}>
                 <div className="mb-2 flex flex-wrap items-center gap-2">
                   <span className={`h-2 w-2 rounded-full ring-2 ring-inset ${cLvl2.chip}`} />
-                  <span className="text-sm font-semibold text-slate-900">
-                    {topic.topicLvl2}
-                  </span>
-                  {topic.created ?? false ? (
+                  <span className="text-sm font-semibold text-slate-900">{topic.topicLvl2}</span>
+                  {(topic.created ?? false) ? (
                     <span
                       className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-emerald-200 bg-emerald-50 text-[11px] font-bold text-emerald-700"
                       title="Catégorie créée"
@@ -65,7 +61,7 @@ export function TopicSection({ group }: { group: GroupedTopic }) {
                   </span>
                   <span className="text-[11px] text-slate-500">•</span>
                   <span className="text-[11px] text-slate-600">
-                    {ideas.length} {pluralize(ideas.length, "idée", "idées")}
+                    {ideas.length} {pluralize(ideas.length, 'idée', 'idées')}
                   </span>
                 </div>
                 <Ideas

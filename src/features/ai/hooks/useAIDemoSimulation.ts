@@ -1,5 +1,5 @@
-import { useMemo, useRef, useState } from "react";
-import type { ResLike } from "../types";
+import { useMemo, useRef, useState } from 'react';
+import type { ResLike } from '../types';
 
 export function useAIDemoSimulation(resources: readonly ResLike[]) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -10,13 +10,12 @@ export function useAIDemoSimulation(resources: readonly ResLike[]) {
 
   const selected = useMemo(
     () => resources[selectedIndex] ?? resources[0],
-    [resources, selectedIndex],
+    [resources, selectedIndex]
   );
 
   const classified = useMemo(
-    () =>
-      classifiedIndex !== null ? resources[classifiedIndex] ?? null : null,
-    [classifiedIndex, resources],
+    () => (classifiedIndex !== null ? (resources[classifiedIndex] ?? null) : null),
+    [classifiedIndex, resources]
   );
 
   const clearIntervalRef = () => {

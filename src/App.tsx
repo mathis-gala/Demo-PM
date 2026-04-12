@@ -1,4 +1,4 @@
-import { AIDemo } from "./features/ai";
+import { AIDemo } from './features/ai';
 
 export default function App() {
   return <AIDemo />;

@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   content: [
@@ -9,5 +9,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
-
+};

@@ -1,9 +1,9 @@
 export type TopicColor = {
-  name: string
-  chip: string
-  border: string
-  softBg: string
-}
+  name: string;
+  chip: string;
+  border: string;
+  softBg: string;
+};
 
 const LVL1_PALETTE: TopicColor[] = [
   {
@@ -54,7 +54,7 @@ const LVL1_PALETTE: TopicColor[] = [
     border: 'border-teal-200',
     softBg: 'bg-teal-50',
   },
-]
+];
 
 const LVL2_PALETTE: TopicColor[] = [
   {
@@ -105,34 +105,34 @@ const LVL2_PALETTE: TopicColor[] = [
     border: 'border-green-200',
     softBg: 'bg-green-50',
   },
-]
+];
 
 function hashStringToInt(input: string) {
-  let h = 0
-  for (let i = 0; i < input.length; i++) h = (h * 31 + input.charCodeAt(i)) | 0
-  return Math.abs(h)
+  let h = 0;
+  for (let i = 0; i < input.length; i++) h = (h * 31 + input.charCodeAt(i)) | 0;
+  return Math.abs(h);
 }
 
 function pickFromPalette(palette: TopicColor[], key: string) {
-  const idx = hashStringToInt(key) % palette.length
-  return palette[idx]
+  const idx = hashStringToInt(key) % palette.length;
+  return palette[idx];
 }
 
 export function colorForTopicLvl1(topicLvl1: string): TopicColor {
-  return pickFromPalette(LVL1_PALETTE, topicLvl1.trim().toLowerCase())
+  return pickFromPalette(LVL1_PALETTE, topicLvl1.trim().toLowerCase());
 }
 
 export function colorForTopicLvl2(topicLvl1: string, topicLvl2: string): TopicColor {
-  const lvl1 = colorForTopicLvl1(topicLvl1)
-  const key = `${topicLvl1.trim().toLowerCase()}|${topicLvl2.trim().toLowerCase()}`
+  const lvl1 = colorForTopicLvl1(topicLvl1);
+  const key = `${topicLvl1.trim().toLowerCase()}|${topicLvl2.trim().toLowerCase()}`;
 
-  let c = pickFromPalette(LVL2_PALETTE, key)
+  let c = pickFromPalette(LVL2_PALETTE, key);
   if (c.name === lvl1.name) {
-    c = LVL2_PALETTE[(hashStringToInt(key) + 1) % LVL2_PALETTE.length]
+    c = LVL2_PALETTE[(hashStringToInt(key) + 1) % LVL2_PALETTE.length];
   }
-  return c
+  return c;
 }
 
 export function allTopicColors() {
-  return [...LVL1_PALETTE, ...LVL2_PALETTE]
+  return [...LVL1_PALETTE, ...LVL2_PALETTE];
 }

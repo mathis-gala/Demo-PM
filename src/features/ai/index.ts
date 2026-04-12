@@ -1,1 +1,1 @@
-export * from "./components/AIDemo";
+export * from './components/AIDemo';

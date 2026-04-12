@@ -1,6 +1,6 @@
-import { Select } from "@ui/Select";
-import { formatTime } from "@utils/formatTime";
-import type { ResLike } from "../types";
+import { Select } from '@ui/Select';
+import { formatTime } from '@utils/formatTime';
+import type { ResLike } from '../types';
 
 export function ResourceSelector({
   resources,
@@ -26,7 +26,7 @@ export function ResourceSelector({
         >
           {resources.map((res, idx) => (
             <option key={`${res.name}-${idx}`} value={idx}>
-              {"origin" in res ? `${res.name} (no orphans)` : res.name}
+              {'origin' in res ? `${res.name} (no orphans)` : res.name}
             </option>
           ))}
         </Select>

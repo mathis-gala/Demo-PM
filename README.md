@@ -9,7 +9,6 @@ Ce dépôt sert de démonstrateur et d’atelier expérimental pour valider des 
 - Tester des mécanismes avant validation.
 - Faire des retours rapides à un client, lead dev ou PM.
 
-
 ## Résultats
 
 Vous pouvez voir les résultats ici : https://mathis-gala.github.io/Demo-PM/
@@ -20,4 +19,3 @@ Vous pouvez voir les résultats ici : https://mathis-gala.github.io/Demo-PM/
 npm install
 npm run dev
 ```
-

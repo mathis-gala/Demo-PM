@@ -1,4 +1,4 @@
-import type { GroupedTopic, GroupedTopicSubtopic, ResItem } from "../types";
+import type { GroupedTopic, GroupedTopicSubtopic, ResItem } from '../types';
 
 type TopicGroupEntry = {
   topicLvl1: string;
@@ -6,7 +6,7 @@ type TopicGroupEntry = {
 };
 
 export function groupByTheme(items: ResItem[], originItems?: ResItem[]): GroupedTopic[] {
-  const originByIdeaId = new Map<string, ResItem["topic"]>();
+  const originByIdeaId = new Map<string, ResItem['topic']>();
   if (originItems) {
     for (const item of originItems) {
       originByIdeaId.set(item.idea.id, item.topic);
@@ -19,9 +19,7 @@ export function groupByTheme(items: ResItem[], originItems?: ResItem[]): Grouped
     const originTopic = originByIdeaId.get(item.idea.id);
     const moved = Boolean(originTopic && originTopic.id !== item.topic.id);
     const movedFrom =
-      moved && originTopic
-        ? `${originTopic.topicLvl1} -> ${originTopic.topicLvl2}`
-        : undefined;
+      moved && originTopic ? `${originTopic.topicLvl1} -> ${originTopic.topicLvl2}` : undefined;
 
     let themeGroup = byTheme.get(item.topic.topicLvl1);
     if (!themeGroup) {
@@ -60,9 +58,7 @@ export function groupByTheme(items: ResItem[], originItems?: ResItem[]): Grouped
         .sort((a, b) => {
           const countDiff = b.ideas.length - a.ideas.length;
           if (countDiff !== 0) return countDiff;
-          return a.topic.topicLvl2
-            .toLowerCase()
-            .localeCompare(b.topic.topicLvl2.toLowerCase());
+          return a.topic.topicLvl2.toLowerCase().localeCompare(b.topic.topicLvl2.toLowerCase());
         });
 
       return {

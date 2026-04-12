@@ -1,17 +1,17 @@
-import { Button } from "@ui/Button";
-import { Card } from "@ui/Card";
-import { Progress } from "@ui/Progress";
-import { useAIDemoSimulation } from "@features/ai/hooks/useAIDemoSimulation";
-import { Topics } from "./Topics";
-import { ResourceSelector } from "./ResourceSelector";
-import { formatTime } from "@utils/formatTime";
+import { Button } from '@ui/Button';
+import { Card } from '@ui/Card';
+import { Progress } from '@ui/Progress';
+import { useAIDemoSimulation } from '@features/ai/hooks/useAIDemoSimulation';
+import { Topics } from './Topics';
+import { ResourceSelector } from './ResourceSelector';
+import { formatTime } from '@utils/formatTime';
 import {
   COHERE_EMBED_RES,
   COHERE_EMBED_RES_NO_ORPHANS,
   CURRENT_RES,
   HYBRID_NO_ORPHANS_RES,
   HYBRID_RES,
-} from "@res";
+} from '@res';
 
 const RESOURCES = [
   CURRENT_RES,
@@ -44,10 +44,9 @@ export function AIDemo() {
             <section>
               <h1 className="text-2xl font-semibold tracking-tight">Demo AI</h1>
               <p className="mt-2 text-sm text-slate-600">
-                Choisis parmi les modèles pour voir les résultats des
-                classifications. L'objectif est de simuler la réactivité (temps
-                de réponse) et la pertinence du modèle, comme si un calcul était
-                en cours.
+                Choisis parmi les modèles pour voir les résultats des classifications. L'objectif
+                est de simuler la réactivité (temps de réponse) et la pertinence du modèle, comme si
+                un calcul était en cours.
               </p>
             </section>
 
@@ -78,7 +77,8 @@ export function AIDemo() {
                   <div className="mt-6 grid gap-2">
                     <div className="flex items-center justify-between text-xs text-slate-600">
                       <span>
-                        Temps simulé: <span className="font-medium text-slate-900">{formatTime(durationMs)}</span>
+                        Temps simulé:{' '}
+                        <span className="font-medium text-slate-900">{formatTime(durationMs)}</span>
                       </span>
                       <span className="tabular-nums">{progressValue}%</span>
                     </div>
