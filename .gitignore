@@ -10,7 +10,9 @@ yarn-error.log*
 pnpm-debug.log*
 .vite
 .turbo
-.eslintcache
+
+# TypeScript incremental build artifacts
+*.tsbuildinfo
 
 # Editor
 .idea
