@@ -13,7 +13,15 @@
     "strict": true,
     "types": ["vite/client"],
     "allowJs": false,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["src/components/ui/*"],
+      "@utils/*": ["src/utils/*"],
+      "@features/*": ["src/features/*"],
+      "@res": ["src/res/index.ts"],
+      "@res/*": ["src/res/*"]
+    }
   },
   "include": ["src"]
 }

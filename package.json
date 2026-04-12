@@ -10,16 +10,17 @@
     "lint": "eslint -c ./config/eslint.config.js ."
   },
   "dependencies": {
+    "lucide-react": "^1.8.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
+    "@types/node": "^24.1.0",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.8",
-    "@types/node": "^24.1.0",
-    "@typescript-eslint/parser": "^8.40.0",
     "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
     "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.34.0",
