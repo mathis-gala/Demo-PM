@@ -190,7 +190,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mb-6 grid gap-4 lg:grid-cols-[minmax(0,1fr)_380px]">
+        <div className="mb-6 grid gap-4">
           <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
             <div className="grid gap-4 md:grid-cols-3">
             {study.map((row) => (
@@ -281,23 +281,22 @@ export default function Home() {
         {selected ? (
           <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
             {previewMode === "translation" ? (
-              <div className="mx-auto" style={{ width: "50%", maxWidth: "50%", minWidth: 400 }}>
+              <div className="mx-auto w-full max-w-[760px]">
                 <MarkdownPanel title={`${t.preview} (${language.toUpperCase()}) • ${selected.model.name}`} content={selected.translation} />
               </div>
             ) : null}
             {previewMode === "gt" ? (
-              <div className="mx-auto" style={{ width: "50%", maxWidth: "50%", minWidth: 400 }}>
+              <div className="mx-auto w-full max-w-[760px]">
                 <MarkdownPanel title={t.gt} content={englishGt} />
               </div>
             ) : null}
             {previewMode === "split" ? (
-              <div className="flex w-full flex-row gap-4 overflow-x-auto pb-2">
+              <div className="grid w-full gap-4 lg:grid-cols-2">
                 <MarkdownPanel
                   title={`${t.translation} (${selected.model.name})`}
                   content={selected.translation}
-                  split
                 />
-                <MarkdownPanel title={t.gt} content={englishGt} split />
+                <MarkdownPanel title={t.gt} content={englishGt} />
               </div>
             ) : null}
           </div>
@@ -310,20 +309,12 @@ export default function Home() {
 function MarkdownPanel({
   title,
   content,
-  split = false,
 }: {
   title: string;
   content: string;
-  split?: boolean;
 }) {
   return (
-    <section
-      className={`rounded-lg border border-slate-200 bg-white p-4 ${
-        split
-          ? "h-[72vh] min-w-[560px] flex-1 basis-1/2 overflow-y-auto"
-          : "w-full"
-      }`}
-    >
+    <section className="w-full rounded-lg border border-slate-200 bg-white p-4">
       <h2 className="text-lg font-semibold">{title}</h2>
       <article className="markdown-body mt-5 max-w-none">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
