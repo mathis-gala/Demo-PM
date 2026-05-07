@@ -354,20 +354,23 @@ function SplitMarkdownComparison({
 
   return (
     <div className="grid gap-4">
-      <div className="grid gap-4 lg:grid-cols-2">
-        <p className="text-lg font-semibold">{translationTitle}</p>
-        <p className="text-lg font-semibold">{gtTitle}</p>
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+        <p className="min-w-0 text-lg font-semibold">{translationTitle}</p>
+        <p className="min-w-0 text-lg font-semibold">{gtTitle}</p>
       </div>
 
       {hasIntro ? (
-        <div className="grid gap-4 lg:grid-cols-2">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <MarkdownBlock content={translation.intro} />
           <MarkdownBlock content={gt.intro} />
         </div>
       ) : null}
 
       {sectionNumbers.map((sectionNumber) => (
-        <div key={sectionNumber} className="grid items-start gap-4 lg:grid-cols-2">
+        <div
+          key={sectionNumber}
+          className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]"
+        >
           <MarkdownBlock content={translation.sections.get(sectionNumber) ?? ""} />
           <MarkdownBlock content={gt.sections.get(sectionNumber) ?? ""} />
         </div>
@@ -395,7 +398,7 @@ function MarkdownPanel({
 
 function MarkdownBlock({ content }: { content: string }) {
   return (
-    <section className="w-full rounded-lg border border-slate-200 bg-white p-4">
+    <section className="h-full min-w-0 rounded-lg border border-slate-200 bg-white p-4">
       <article className="markdown-body max-w-none">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       </article>
