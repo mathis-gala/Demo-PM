@@ -24,6 +24,11 @@ interface ComparedMetrics {
   score: number;
 }
 
+interface SplitMarkdown {
+  intro: string;
+  sections: Map<number, string>;
+}
+
 const MODELS: TranslationModel[] = [GPT54Mini, GPT5mini, GPT54Nano];
 const markdownFiles = import.meta.glob("../res/*.md", {
   query: "?raw",
@@ -145,6 +150,30 @@ function estimatePrice(
 
 function filenameForLanguage(model: TranslationModel, language: Language): string {
   return language === "fr" ? model.filenameFr : model.filenamePt;
+}
+
+function splitNumberedSections(content: string): SplitMarkdown {
+  const headingPattern = /^##\s+(\d+)\.\s+.*$/gm;
+  const matches = [...content.matchAll(headingPattern)];
+
+  if (matches.length === 0) {
+    return { intro: content.trim(), sections: new Map() };
+  }
+
+  const sections = new Map<number, string>();
+  const intro = content.slice(0, matches[0].index).trim();
+
+  matches.forEach((match, index) => {
+    const start = match.index;
+    const end = matches[index + 1]?.index ?? content.length;
+    const sectionNumber = Number(match[1]);
+
+    if (Number.isFinite(sectionNumber)) {
+      sections.set(sectionNumber, content.slice(start, end).trim());
+    }
+  });
+
+  return { intro, sections };
 }
 
 export default function Home() {
@@ -291,17 +320,58 @@ export default function Home() {
               </div>
             ) : null}
             {previewMode === "split" ? (
-              <div className="grid w-full gap-4 lg:grid-cols-2">
-                <MarkdownPanel
-                  title={`${t.translation} (${selected.model.name})`}
-                  content={selected.translation}
-                />
-                <MarkdownPanel title={t.gt} content={englishGt} />
-              </div>
+              <SplitMarkdownComparison
+                gtContent={englishGt}
+                gtTitle={t.gt}
+                translationContent={selected.translation}
+                translationTitle={`${t.translation} (${selected.model.name})`}
+              />
             ) : null}
           </div>
         ) : null}
       </div>
+    </div>
+  );
+}
+
+function SplitMarkdownComparison({
+  gtContent,
+  gtTitle,
+  translationContent,
+  translationTitle,
+}: {
+  gtContent: string;
+  gtTitle: string;
+  translationContent: string;
+  translationTitle: string;
+}) {
+  const translation = splitNumberedSections(translationContent);
+  const gt = splitNumberedSections(gtContent);
+  const sectionNumbers = [...new Set([...translation.sections.keys(), ...gt.sections.keys()])].sort(
+    (a, b) => a - b,
+  );
+  const hasIntro = translation.intro.length > 0 || gt.intro.length > 0;
+
+  return (
+    <div className="grid gap-4">
+      <div className="grid gap-4 lg:grid-cols-2">
+        <p className="text-lg font-semibold">{translationTitle}</p>
+        <p className="text-lg font-semibold">{gtTitle}</p>
+      </div>
+
+      {hasIntro ? (
+        <div className="grid gap-4 lg:grid-cols-2">
+          <MarkdownBlock content={translation.intro} />
+          <MarkdownBlock content={gt.intro} />
+        </div>
+      ) : null}
+
+      {sectionNumbers.map((sectionNumber) => (
+        <div key={sectionNumber} className="grid items-start gap-4 lg:grid-cols-2">
+          <MarkdownBlock content={translation.sections.get(sectionNumber) ?? ""} />
+          <MarkdownBlock content={gt.sections.get(sectionNumber) ?? ""} />
+        </div>
+      ))}
     </div>
   );
 }
@@ -317,6 +387,16 @@ function MarkdownPanel({
     <section className="w-full rounded-lg border border-slate-200 bg-white p-4">
       <h2 className="text-lg font-semibold">{title}</h2>
       <article className="markdown-body mt-5 max-w-none">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
+      </article>
+    </section>
+  );
+}
+
+function MarkdownBlock({ content }: { content: string }) {
+  return (
+    <section className="w-full rounded-lg border border-slate-200 bg-white p-4">
+      <article className="markdown-body max-w-none">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       </article>
     </section>
