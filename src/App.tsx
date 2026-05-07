@@ -1,5 +1,9 @@
-import { AIDemo } from './features/ai';
+import { Outlet } from '@tanstack/react-router';
 
 export default function App() {
-  return <AIDemo />;
+  return (
+    <div className="min-h-full bg-white">
+      <Outlet />
+    </div>
+  );
 }
