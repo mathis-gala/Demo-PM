@@ -12,6 +12,9 @@ export default function AiNav() {
       <Link to="/translate-ai" className={baseButtonClass}>
         AI Text Translation
       </Link>
+      <Link to="/gift-simulation" className={baseButtonClass}>
+        Simulation cadeaux
+      </Link>
     </div>
   );
 }

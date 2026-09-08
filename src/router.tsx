@@ -1,5 +1,12 @@
-import { Navigate, createRootRoute, createRoute, createRouter } from '@tanstack/react-router';
+import {
+  Navigate,
+  createRootRoute,
+  createRoute,
+  createRouter,
+  createHashHistory,
+} from '@tanstack/react-router';
 import App from './App';
+import GiftSimulation from './features/gifts/GiftSimulation';
 import AiNav from './components/AiNav';
 import { AIDemo } from './features/ai';
 import TranslateHome from './translate-ai/home/Home';
@@ -27,9 +34,18 @@ const translateRoute = createRoute({
   component: TranslateHome,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, classifRoute, translateRoute]);
+const giftsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/gift-simulation',
+  component: GiftSimulation,
+});
 
-export const router = createRouter({ routeTree });
+const routeTree = rootRoute.addChildren([indexRoute, classifRoute, translateRoute, giftsRoute]);
+
+export const router = createRouter({
+  routeTree,
+  history: import.meta.env.PROD ? createHashHistory() : undefined,
+});
 
 declare module '@tanstack/react-router' {
   interface Register {
