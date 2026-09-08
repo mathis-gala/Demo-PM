@@ -789,6 +789,16 @@ button[aria-pressed='true'] > .strategy-check {
   gap: 10px;
   margin-top: 12px;
 }
+.shop-numbers label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+.shop-numbers input {
+  margin-top: 0;
+  flex-shrink: 0;
+}
 .shop-retained {
   font-size: 11px;
   color: oklch(0.86 0.08 180);
