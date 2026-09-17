@@ -7,6 +7,7 @@ import {
 } from '@tanstack/react-router';
 import App from './App';
 import GiftSimulation from './features/gifts/GiftSimulation';
+import ThemeDemo from './features/theme/ThemeDemo';
 import AiNav from './components/AiNav';
 import { AIDemo } from './features/ai';
 import TranslateHome from './translate-ai/home/Home';
@@ -40,7 +41,19 @@ const giftsRoute = createRoute({
   component: GiftSimulation,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, classifRoute, translateRoute, giftsRoute]);
+const themeRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/image-theme',
+  component: ThemeDemo,
+});
+
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  classifRoute,
+  translateRoute,
+  giftsRoute,
+  themeRoute,
+]);
 
 export const router = createRouter({
   routeTree,

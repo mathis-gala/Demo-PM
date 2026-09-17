@@ -15,6 +15,9 @@ export default function AiNav() {
       <Link to="/gift-simulation" className={baseButtonClass}>
         Simulation cadeaux
       </Link>
+      <Link to="/image-theme" className={baseButtonClass}>
+        Couleurs en scène
+      </Link>
     </div>
   );
 }
