@@ -31,7 +31,7 @@ test('theme variants keep the selected seed, preserve the reference and maintain
     '#777777',
   ]) {
     const backgrounds = new Set();
-    for (let mode = 0; mode < 3; mode++) {
+    for (let mode = 0; mode < 2; mode++) {
       const theme = createTheme(seed, mode);
       assert.equal(theme.seed, seed);
       backgrounds.add(theme.background);
@@ -43,6 +43,6 @@ test('theme variants keep the selected seed, preserve the reference and maintain
         assert.ok(contrastRatio(theme.primary, background) >= 4.5, `${seed}: heading contrast`);
       }
     }
-    assert.equal(backgrounds.size, 3);
+    assert.equal(backgrounds.size, 2);
   }
 });

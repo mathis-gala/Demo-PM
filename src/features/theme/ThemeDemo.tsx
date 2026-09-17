@@ -8,7 +8,6 @@ import {
   ImagePlus,
   Palette,
   RotateCcw,
-  Shuffle,
   ShieldCheck,
   Upload,
 } from 'lucide-react';
@@ -39,7 +38,6 @@ export default function ThemeDemo() {
   const [hexDraft, setHexDraft] = useState('#122161');
   const [hexError, setHexError] = useState('');
   const [compared, setCompared] = useState(false);
-  const [shuffleCount, setShuffleCount] = useState(0);
   const fileInput = useRef<HTMLInputElement>(null);
   const request = useRef(0);
   const theme = createTheme(seed, arrangement);
@@ -118,13 +116,6 @@ export default function ThemeDemo() {
     setPalette(referencePalette);
     selectColor('#122161');
     setNotice('Le visuel et la couleur d’origine ont été restaurés.');
-  }
-  function rearrange() {
-    const next = (arrangement + 1) % arrangements.length;
-    setArrangement(next);
-    setShuffleCount(shuffleCount + 1);
-    setCompared(false);
-    setNotice(`Harmonie ${arrangements[next].toLowerCase()} appliquée, à partir de ${seed}.`);
   }
   function handleColor(event: ChangeEvent<HTMLInputElement>) {
     selectColor(event.target.value.toUpperCase());
@@ -341,15 +332,6 @@ export default function ThemeDemo() {
                 </button>
               ))}
             </div>
-            <button className="theme-shuffle" onClick={rearrange}>
-              <Shuffle
-                key={shuffleCount}
-                size={17}
-                className={shuffleCount ? 'theme-shuffle-icon' : ''}
-              />{' '}
-              Réarranger les couleurs
-              <ArrowUpRight size={16} />
-            </button>
             <div
               className="theme-ramp"
               aria-label="Nuances générées à partir de la couleur choisie"

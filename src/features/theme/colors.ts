@@ -36,7 +36,7 @@ export interface ImageTheme {
   border: string;
   scale: string[];
 }
-export const arrangements = ['Essentiel', 'Enveloppant', 'Contrasté'];
+export const arrangements = ['Essentiel', 'Contrasté'];
 
 export function contrastRatio(first: string, second: string): number {
   return Contrast.ratioOfTones(
@@ -55,17 +55,13 @@ export function createTheme(seed: string, arrangement: number): ImageTheme {
   let background = '#F7F7F7';
   let selection = '#FFFFFF';
   if (arrangement === 1) {
-    background = tone(92);
-    selection = tone(88);
-  }
-  if (arrangement === 2) {
     background = neutralTone(98);
     selection = tone(96);
   }
   const surface = '#FFFFFF';
   let primary = seed.toUpperCase();
   let primaryTone = source.tone;
-  if (arrangement === 2) {
+  if (arrangement === 1) {
     primaryTone = Math.min(primaryTone, 25);
     primary = tone(primaryTone);
   }
@@ -74,12 +70,10 @@ export function createTheme(seed: string, arrangement: number): ImageTheme {
     primaryTone = Math.max(0, primaryTone - 1);
     primary = tone(primaryTone);
   }
-  let primaryEnd = primary;
-  if (arrangement === 1) primaryEnd = tone(Math.max(0, primaryTone - 12));
   return {
     seed: seed.toUpperCase(),
     primary,
-    primaryEnd,
+    primaryEnd: primary,
     onPrimary: '#FFFFFF',
     surface,
     background,
